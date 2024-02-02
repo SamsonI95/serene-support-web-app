@@ -10,6 +10,7 @@ import "./App.css";
 import Home from "./components/pages/Home";
 
 import Header from "./components/reusables/Header";
+import Footer from "./components/reusables/Footer";
 
 function App() {
   const router = createBrowserRouter(
@@ -36,6 +37,10 @@ const Root = () => {
 
       <div>
         <Outlet />
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </>
   );

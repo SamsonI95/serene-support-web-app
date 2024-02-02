@@ -19,6 +19,8 @@ const Button = ({ children, onClick, type, variant, size }) => {
     switch (size) {
       case "small":
         return "h-16 w-36 px-2 py-1 text-lg rounded-2xl";
+      case "small2":
+        return "h-16 w-36 px-2 py-1 text-xs rounded-2xl";
       case "medium":
         return "px-4 py-2 text-base";
       case "large":

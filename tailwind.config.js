@@ -8,7 +8,11 @@ export default {
         "nav-text-color": "#A3A3A3",
         "secondary-color": "#002261"
       },
-      
+      spacing: {
+        "85": "25rem",
+        "1240": "77.5rem",
+        "1400": "87.5rem",
+      },
     },
   },
   plugins: [],
