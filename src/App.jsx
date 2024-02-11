@@ -6,7 +6,6 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
-import "./App.css";
 import Home from "./components/pages/Home";
 
 import Header from "./components/reusables/Header";
@@ -35,7 +34,7 @@ const Root = () => {
         <Header />
       </div>
 
-      <div>
+      <div >
         <Outlet />
       </div>
 

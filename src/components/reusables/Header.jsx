@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <div className="bg-white shadow-md">
-        <section className="flex items-center justify-between p-4 md:px-20">
+        <section className=" max-w-[1440px] mx-auto px-7 flex items-center justify-between p-4 md:px-20">
           <div className="flex items-center relative">
             <img
               src="Assets/logo.png"
