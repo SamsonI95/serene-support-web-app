@@ -20,7 +20,7 @@ const NavBar = () => {
   return (
     <>
       {/*Desktop Navigation*/}
-      <section className="hidden md:flex no-underline text-nav-text-color text-2xl  mt-4 relative -right-14">
+      <section className="hidden md:flex no-underline text-nav-text-color text-2xl w-max  mt-4 relative">
         <div className="relative top-4 right-20 space-x-10 ">
           <Link to="/index" className="hover:text-primary-color ">
             Home

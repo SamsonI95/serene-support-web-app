@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-secondary-color p-4 md:p-6 bottom-0 h-fit">
-      <div className="flex items-center justify-between ">
+      <div className="flex items-center ">
         {/* Mobile Footer */}
         <div className="md:hidden">
           <section className="flex mt-16">
@@ -165,7 +165,7 @@ const Footer = () => {
         </div>
 
         {/* Desktop Footer */}
-        <div className="hidden w-fit md:block space-x-5 px-12 ">
+        <div className="hidden w-fit md:block items-center justify-center m-auto space-x-5">
           <section className="relative top-16 w-fit">
             <Link to="/home">
               <img
@@ -192,7 +192,7 @@ const Footer = () => {
             </div>
           </section>
           <section className="inline-flex translate-x-1/3 relative -top-36">
-            <div className="mr-36 mb-12">
+            <div className="mr-36 mb-8">
               <h3 className="text-white text-xl mb-10">What we do</h3>
               <ul className="text-white">
                 <li className="mb-8">
@@ -219,7 +219,7 @@ const Footer = () => {
                     Booking
                   </Link>
                 </li>
-                <li className="mb-8">
+                <li>
                   <Link
                     to="/community"
                     className="text-white hover:text-primary-color"
@@ -229,7 +229,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="mr-36 mb-12">
+            <div className="mr-36 mb-8">
               <h3 className="text-white text-xl mb-10">Get our App</h3>
               <ul className="text-white">
                 <li className="mb-8">
@@ -237,7 +237,7 @@ const Footer = () => {
                     Android
                   </Link>
                 </li>
-                <li className="mb-8">
+                <li>
                   <Link
                     to="/services"
                     className="text-white hover:text-primary-color"
@@ -247,7 +247,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="mr-36 mb-12">
+            <div className="mr-36 mb-8">
               <h3 className="text-white text-xl mb-10">Help</h3>
               <ul className="text-white">
                 <li className="mb-8">
@@ -255,7 +255,7 @@ const Footer = () => {
                     Get Help
                   </Link>
                 </li>
-                <li className="mb-8">
+                <li>
                   <Link
                     to="/services"
                     className="text-white hover:text-primary-color"
@@ -273,7 +273,7 @@ const Footer = () => {
                     Cookie Policy
                   </Link>
                 </li>
-                <li className="mb-8">
+                <li>
                   <Link
                     to="/services"
                     className="text-white hover:text-primary-color"
@@ -287,7 +287,7 @@ const Footer = () => {
           <section>
             <div className="w-1240 h-1 bg-white mb-12"></div>
           </section>
-          <section className="flex space-x-40 mb-5 bottom-0">
+          <section className="flex justify-evenly bottom-0">
             <div className="flex text-white">
               <h3>2023</h3>
               <h4 className="font-light">SerenSupport</h4>
@@ -301,7 +301,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
               <FontAwesomeIcon icon={faSquareXTwitter} className="mr-2" />
             </div>
-            <div className="translate-x-85">
+            <div>
               <input type="text" className="rounded-2xl w-28 h-8" />
             </div>
           </section>

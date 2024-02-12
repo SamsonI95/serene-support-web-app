@@ -59,35 +59,57 @@ const Home = () => {
 
         {/* Desktop Home Page */}
         <section className="hidden max-w-[1440px] mx-auto px-24 md:flex items-center justify-between h-fit">
-          <section className="flex space-x-60">
-            <div className="mt-24">
-              <div className="text-secondary-color text-5xl font-bold ">
-                Supporting you to happiness & Wholeness
+          <div>
+            <section className="flex mt-10 space-x-50">
+              <div className="mt-24">
+                <div className="text-secondary-color text-5xl w-143 font-bold ">
+                  Supporting you to happiness & Wholeness
+                </div>
+                <div className="text-lg text-primary-color my-10 w-95">
+                  Serene Support is carefully designed to connect you with
+                  licensed therapists who understand your mental health journey.
+                  Whether you're navigating stress, anxiety, relationship
+                  challenges, or personal growth, our virtual doctors are always
+                  ready to support you .
+                </div>
+                <div className="space-x-4">
+                  <Button type="button" variant="primary" size="small">
+                    Register
+                  </Button>
+                  <Button type="button" variant="hollow" size="medium">
+                    Book A Therapist
+                  </Button>
+                </div>
               </div>
-              <div className="text-lg text-primary-color my-10 w-95">
-                Serene Support is carefully designed to connect you with
-                licensed therapists who understand your mental health journey.
-                Whether you're navigating stress, anxiety, relationship
-                challenges, or personal growth, our virtual doctors are always
-                ready to support you .
-              </div>
-              <div className="space-x-4">
-                <Button type="button" variant="primary" size="small">
-                  Register
-                </Button>
-                <Button type="button" variant="hollow" size="medium">
-                  Book A Therapist
-                </Button>
-              </div>
-            </div>
 
-            <div className="">
-              <img
-                src="public/Assets/nathan-anderson-J3Xjyg5m8kY-unsplash 1.png"
-                alt="smiles"
-              />
-            </div>
-          </section>
+              <div>
+                <img
+                  src="public/Assets/nathan-anderson-J3Xjyg5m8kY-unsplash 1.png"
+                  alt="smiles"
+                  style={{ width: "610px", height: "610px" }}
+                />
+              </div>
+            </section>
+            <section className="mt-16">
+              <div className="text-nav-text-color text-center mb-8">
+                Trusted by organizations like
+              </div>
+              <div className="flex items-center justify-center space-x-40">
+                <img
+                  src="public/Assets/WHO 1.png"
+                  alt="who"
+                />
+                <img
+                  src="public/Assets/images-2 1.png"
+                  alt="sponsor"
+                />
+                <img
+                  src="public/Assets/Screenshot 2023-08-09 at 19.43 1.png"
+                  alt="nami"
+                />
+              </div>
+            </section>
+          </div>
         </section>
       </section>
     </>
