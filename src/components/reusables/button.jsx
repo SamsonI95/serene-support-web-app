@@ -10,7 +10,7 @@ const Button = ({ children, onClick, type, variant, size }) => {
       case "secondary":
         return "bg-gray-300 hover:bg-gray-400 text-gray-800";
       case "hollow":
-        return "bg-white hover:bg-secondary-color text-primary-color border-primary-color border-solid border" 
+        return "bg-white hover:bg-secondary-color hover:text-white text-primary-color border-primary-color border-solid border" 
       // Add more variants as needed
       default:
         return "bg-gray-500 hover:bg-gray-700 text-white";
@@ -25,6 +25,8 @@ const Button = ({ children, onClick, type, variant, size }) => {
         return "h-16 w-36 px-2 py-1 text-xs rounded-2xl";
       case "medium":
         return "h-16 w-40 px-4 py-2 text-base rounded-2xl";
+        case "semi-medium":
+        return "h-16 w-45 px-4 py-2 text-base rounded-2xl";
       case "large":
         return "px-6 py-3 text-lg";
       // Add more sizes as needed
