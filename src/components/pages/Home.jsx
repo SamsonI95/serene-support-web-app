@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 //Component
 import Button from "../reusables/button";
 import CardStyyle1 from "../reusables/CardStyyle1";
+import CardStyyle2 from "../reusables/CardStyyle2";
 import ServicesList from "../Page Component/ServicesList";
 
 //Data types
 import { HelpData } from "../Data types/CardStyyle1Data";
+import { cardData } from "../Data types/CardStyyle2Data";
 import { services } from "../Data types/ServicesData";
 
 //Style
@@ -225,6 +227,23 @@ const Home = () => {
                   <p className="font-regular  text-higlight-text-color">
                     Successful online sessions
                   </p>
+                </div>
+              </div>
+            </section>
+            <section className="mt-20 -translate-x-12">
+              <div className="bg-bcg-color w-140 py-36 px-36">
+                <h3 className=" text-center -translate-x-20 font-semibold text-2xl w-96">
+                  Get latest News by subscribing to our Newsletter
+                </h3>
+                <div className="flex translate-y-10 justify-center">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="bg-white indent-5 rounded-l-lg rounded-r-none w-48 h-11"
+                  />
+                  <Button type="button" variant="subscribe" size="sub-button">
+                    Subscribe
+                  </Button>
                 </div>
               </div>
             </section>
@@ -451,6 +470,37 @@ const Home = () => {
                 </div>
               </div>
             </section>
+            <section className="mt-40">
+              <div>
+                <h3 className="text-center text-5xl font-semibold">
+                  Love & smile from patients who are treated by serene support
+                </h3>
+              </div>
+              <div className="mt-20">
+                <div className="flex justify-evenly">
+                  {cardData.map((cardData) => (
+                    <CardStyyle2 key={cardData.id} {...cardData} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section className="hidden lg:block mt-40 w-full">
+          <div className="bg-bcg-color py-48 px-48">
+            <h3 className=" text-center font-semibold text-5xl ">
+              Get latest News by subscribing to our Newsletter
+            </h3>
+            <div className="flex translate-y-10 justify-center">
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="bg-white text-xl indent-5 rounded-l-lg rounded-r-none w-80 h-20"
+              />
+              <Button type="button" variant="subscribe" size="sub-button">
+                Subscribe
+              </Button>
+            </div>
           </div>
         </section>
       </section>

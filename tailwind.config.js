@@ -10,6 +10,7 @@ export default {
         "secondary-color": "#002261",
         "services-color": "#F3F7FE",
         "border-line-color": "#A3A3A3",
+        "bcg-color": "#00CCFF"
       },
       spacing: {
         "0.25": "0.063rem",
@@ -21,6 +22,7 @@ export default {
         "83": "360px",
         "95": "434px",
         "97": "421px",
+        "140": "500px",
         "143": "550px",
         "145": "579px",
         "170": "610px",

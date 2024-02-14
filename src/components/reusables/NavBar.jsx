@@ -21,8 +21,8 @@ const NavBar = () => {
     <>
       {/*Desktop Navigation*/}
       <section className="hidden md:flex no-underline text-nav-text-color text-2xl w-max  mt-4 relative">
-        <div className="relative top-4 right-20 space-x-10 ">
-          <Link to="/index" className="hover:text-primary-color ">
+        <div className="relative top-4 right-20 space-x-10">
+          <Link to="/home" className="hover:text-primary-color ">
             Home
           </Link>
           <Link to="/services" className="hover:text-primary-color">
@@ -61,7 +61,11 @@ const NavBar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <>
-            <div className="fixed top-0 right-0 h-5/6 w-72 bg-secondary-color p-4 z-10">
+          <div></div>
+            <div
+              className="fixed top-0 right-0 h-5/6 w-72 bg-secondary-color p-4 z-10 transform transition-transform ease-in-out duration-300 
+          ${isMobileMenuOpen ? translate-x-0 : translate-x-full}"
+            >
               <button
                 onClick={handleToggleMobileMenu}
                 className="block text-black focus:outline-none float-end"
@@ -71,44 +75,48 @@ const NavBar = () => {
                   className="w-10 h-10 text-white mb-10 left-7"
                 />
               </button>
-              <Link
-                to="/index"
-                className="block text-white py-2 hover:text-primary-color mt-20 mb-10"
-              >
-                Home
-              </Link>
-              <Link
-                to="/services"
-                className="block text-white py-2 hover:text-primary-color  mb-10"
-              >
-                Services
-              </Link>
-              <Link
-                to="/therapists"
-                className="block text-white py-2 hover:text-primary-color  mb-10"
-              >
-                Therapists
-              </Link>
-              <Link
-                to="/privacy"
-                className="block text-white py-2 hover:text-primary-color  mb-10"
-              >
-                Privacy
-              </Link>
-              <Link
-                to="/community"
-                className="block text-white py-2 hover:text-primary-color  mb-20"
-              >
-                Community
-              </Link>
-              <Button
-                onClick={handleClick}
-                type="button"
-                variant="primary"
-                size="small"
-              >
-                Sign In
-              </Button>
+              <div className="translate-x-5">
+                <Link
+                  to="/home"
+                  className="block text-white py-2 hover:text-primary-color mt-20 mb-10"
+                  onClick={handleToggleMobileMenu}
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/services"
+                  className="block text-white py-2 hover:text-primary-color  mb-10"
+                >
+                  Services
+                </Link>
+                <Link
+                  to="/therapist"
+                  className="block text-white py-2 hover:text-primary-color  mb-10"
+                  onClick={handleToggleMobileMenu}
+                >
+                  Therapists
+                </Link>
+                <Link
+                  to="/privacy"
+                  className="block text-white py-2 hover:text-primary-color  mb-10"
+                >
+                  Privacy
+                </Link>
+                <Link
+                  to="/community"
+                  className="block text-white py-2 hover:text-primary-color  mb-20"
+                >
+                  Community
+                </Link>
+                <Button
+                  onClick={handleClick}
+                  type="button"
+                  variant="primary"
+                  size="small"
+                >
+                  Sign In
+                </Button>
+              </div>
             </div>
           </>
         )}

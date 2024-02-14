@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 import Button from "./button";
 
@@ -14,6 +15,19 @@ import {
 const Footer = () => {
   const handleClick = () => {
     // Handle button click
+  };
+
+  const { t } = useTranslation();
+
+  const [ locale, setLocale ] = useState("en");
+
+  const handleLanguageChange = (e) => {
+    const selectedLanguage = e.target.value;
+    setLocale(selectedLanguage);
+    let loc = "http://localhost:5173/";
+    window.location.replace(
+      loc + "?lng=" + e.taregt.value
+    )
   };
 
   return (
@@ -147,7 +161,23 @@ const Footer = () => {
               <FontAwesomeIcon icon={faSquareXTwitter} className="mr-2" />
             </div>
             <div className="translate-x-36">
-              <input type="text" className="rounded-2xl w-28 h-8" />
+              <label htmlFor="languageSelector" className="sr-only">
+                {t("Select Language")}
+              </label>
+              <select
+                id="languageSelector"
+                className="rounded-2xl w-28 h-8 indent-2.5 cursor-pointer"
+                value={locale}
+                onChange={handleLanguageChange}
+              >
+                <option>Select</option>
+                <option value="zh">Chinese</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">French</option>
+                <option value="gb">German</option>
+                {/* Add more language options as needed */}
+              </select>
             </div>
           </section>
           <section>
@@ -283,7 +313,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          </section> 
+          </section>
           <section>
             <div className="w-1240 h-1 bg-white mb-12"></div>
           </section>

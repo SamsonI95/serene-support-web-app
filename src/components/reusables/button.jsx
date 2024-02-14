@@ -6,12 +6,14 @@ const Button = ({ children, onClick, type, variant, size }) => {
   const getButtonStyle = () => {
     switch (variant) {
       case "primary":
-        return "bg-primary-color text-white ";
+        return "bg-primary-color text-white hover:bg-white hover:text-primary-color hover:border-primary-color border-solid border";
       case "secondary":
         return "bg-gray-300 hover:bg-gray-400 text-gray-800";
       case "hollow":
         return "bg-white hover:bg-secondary-color hover:text-white text-primary-color border-primary-color border-solid border" 
       // Add more variants as needed
+      case "subscribe":
+        return "bg-primary-color text-white"; 
       default:
         return "bg-gray-500 hover:bg-gray-700 text-white";
     }
@@ -29,6 +31,8 @@ const Button = ({ children, onClick, type, variant, size }) => {
         return "h-16 w-45 px-4 py-2 text-base rounded-2xl";
       case "large":
         return "px-6 py-3 text-lg";
+      case "sub-button":
+        return "px-4  text-lg rounded-l-none rounded-r-lg";
       // Add more sizes as needed
       default:
         return "px-4 py-2 text-base";

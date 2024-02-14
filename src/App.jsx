@@ -8,6 +8,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import Home from "./components/pages/Home";
+import Therapist from "./components/pages/Therapist";
 
 import Header from "./components/reusables/Header";
 import Footer from "./components/reusables/Footer";
@@ -16,7 +17,8 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
-        <Route index element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/therapist" element={<Therapist/>} />
       </Route>
     )
   );
