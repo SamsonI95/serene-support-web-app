@@ -6,6 +6,7 @@ export default {
       colors: {
         "primary-color": "#2E72EE",
         "nav-text-color": "#A3A3A3",
+        "higlight-text-color": "#464646",
         "secondary-color": "#002261",
         "services-color": "#F3F7FE",
         "border-line-color": "#A3A3A3",

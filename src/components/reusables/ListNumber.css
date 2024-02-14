@@ -1,0 +1,19 @@
+/* Add this style to your CSS or use a style tag in your React component */
+.custom-list {
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+.custom-list li::before {
+  content: counter(my-counter, decimal-leading-zero);
+  counter-increment: my-counter;
+  font-weight: bold;
+  color: #3182ce; /* Customize the color */
+  font-size: 1.5rem; /* Customize the font size */
+  margin-right: 0.5rem; /* Adjust spacing */
+}
+
+/* Add this class to your list items */
+.relative {
+  position: relative;
+}
