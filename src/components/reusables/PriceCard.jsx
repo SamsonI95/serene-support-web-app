@@ -6,7 +6,7 @@ import Button from "../reusables/button";
 
 const PriceCard = ({ title, price, time, detail }) => {
   return (
-    <div className="bg-white shadow-md px-6 py-12 mb-6 rounded-lg  w-81 mx-auto text-center hover:bg-services-color">
+    <div className="bg-white shadow-md px-6 py-12 mb-12 rounded-lg  w-81 mx-auto text-center hover:bg-services-color lg:hover:scale-110 duration-500">
       <h4 className="mb-8">{title}</h4>
       <div className="flex items-center justify-center mb-8">
         <h3 className="font-bold text-2xl">{price}</h3>

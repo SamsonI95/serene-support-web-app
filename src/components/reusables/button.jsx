@@ -5,12 +5,16 @@ const Button = ({ children, onClick, type, variant, size }) => {
   // Determine the button style based on the variant prop
   const getButtonStyle = () => {
     switch (variant) {
+      case "primary-small":
+        return "text-sm bg-primary-color text-white hover:bg-white hover:text-primary-color hover:border-primary-color border-solid border"
       case "primary":
         return "bg-primary-color text-white hover:bg-white hover:text-primary-color hover:border-primary-color border-solid border";
       case "secondary":
         return "bg-gray-300 hover:bg-gray-400 text-gray-800";
       case "hollow":
-        return "bg-white hover:bg-secondary-color hover:text-white text-primary-color border-primary-color border-solid border" 
+        return "bg-white hover:bg-secondary-color hover:text-white text-primary-color border-primary-color border-solid border"
+        case "hollow-small":
+        return "text-sm bg-white hover:bg-secondary-color hover:text-white text-primary-color border-primary-color border-solid border"  
       // Add more variants as needed
       case "subscribe":
         return "bg-primary-color text-white"; 
@@ -21,6 +25,8 @@ const Button = ({ children, onClick, type, variant, size }) => {
 
   const getButtonSize = () => {
     switch (size) {
+      case "xsmall":
+        return "h-16 w-30 px-2 py-1 text-lg rounded-2xl"
       case "small":
         return "h-16 w-36 px-2 py-1 text-lg rounded-2xl";
       case "small2":
