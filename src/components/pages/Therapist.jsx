@@ -1,9 +1,11 @@
 //App
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 //Component
+import DoctorModal from "../Page Component/DoctorModal";
+import DoctorCardModal from "../Page Component/DoctorCardModal";
 import PriceCard from "../reusables/PriceCard";
 import TherapistCard1 from "../reusables/TherapistCard1";
 import TherapistCard2 from "../reusables/TherapistCard2";
@@ -12,9 +14,18 @@ import TherapistCard2 from "../reusables/TherapistCard2";
 import { priceCard } from "../Data types/PriceData";
 import { data1 } from "../Data types/TherapistCardData1";
 import { data2 } from "../Data types/TherapistCardData2";
+import {ModalData} from "../Data types/ModalData";
 import Button from "../reusables/button";
 
 const Therapist = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedTherapist, setSelectedTherapist] = useState(null);
+
+  const toggleModal = (therapist) => {
+    setIsOpen(!isOpen);
+    setSelectedTherapist(therapist); // Select the clicked therapist
+  };
+
   return (
     <>
       <section>
@@ -78,9 +89,19 @@ const Therapist = () => {
                 </button>
               </div>
               <div className="grid grid-cols-2 gap-6 mb-10">
-                {data1.map((data1) => (
-                  <TherapistCard1 key={data1.id} {...data1} />
-                ))}
+                {data1 &&
+                  data1.map((therapists) => (
+                    <div key={therapists.id} className="cursor-pointer">
+                      <TherapistCard1 {...therapists} />
+                      {isOpen &&
+                        selectedTherapist === ModalData && ( // Conditionally render modal
+                          <DoctorCardModal
+                            therapistData={therapists}
+                            onClose={toggleModal} // Pass onClose handler
+                          />
+                        )}
+                    </div>
+                  ))}
               </div>
               <div className="flex justify-center mb-20">
                 <Button type="button" variant="hollow" size="small">

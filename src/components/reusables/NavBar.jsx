@@ -90,7 +90,7 @@ const NavBar = () => {
                   Services
                 </Link>
                 <Link
-                  to="/therapist"
+                  to="/therapists"
                   className="block text-white py-2 hover:text-primary-color  mb-10"
                   onClick={handleToggleMobileMenu}
                 >

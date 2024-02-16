@@ -1,7 +1,8 @@
 import React from "react";
-import StarRating from "../reusables/StarRating"; // Adjust the import path
+import StarRating from "../reusables/StarRating";
+import DoctorModal from "../Page Component/DoctorModal";
 
-const TherapistCard1 = ({ image, name, ratingNumber }) => {
+const TherapistCard1 = ({ image, name, ratingNumber, therapistData }) => {
   return (
     <div className="relative max-w-xs overflow-hidden shadow-md bg-white mb-4 rounded-md">
       <img src={image} alt={name} className="w-full object-cover" />
@@ -12,6 +13,7 @@ const TherapistCard1 = ({ image, name, ratingNumber }) => {
           <span className="text-xs text-yellow-400 relative top-0">{`(${ratingNumber})`}</span>
         </div>
       </div>
+      <DoctorModal therapistData={therapistData} />
     </div>
   );
 };
