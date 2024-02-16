@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 //Component
-import DoctorModal from "../Page Component/DoctorModal";
-import DoctorCardModal from "../Page Component/DoctorCardModal";
 import PriceCard from "../reusables/PriceCard";
 import TherapistCard1 from "../reusables/TherapistCard1";
 import TherapistCard2 from "../reusables/TherapistCard2";
@@ -18,13 +16,6 @@ import {ModalData} from "../Data types/ModalData";
 import Button from "../reusables/button";
 
 const Therapist = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedTherapist, setSelectedTherapist] = useState(null);
-
-  const toggleModal = (therapist) => {
-    setIsOpen(!isOpen);
-    setSelectedTherapist(therapist); // Select the clicked therapist
-  };
 
   return (
     <>
@@ -93,13 +84,6 @@ const Therapist = () => {
                   data1.map((therapists) => (
                     <div key={therapists.id} className="cursor-pointer">
                       <TherapistCard1 {...therapists} />
-                      {isOpen &&
-                        selectedTherapist === ModalData && ( // Conditionally render modal
-                          <DoctorCardModal
-                            therapistData={therapists}
-                            onClose={toggleModal} // Pass onClose handler
-                          />
-                        )}
                     </div>
                   ))}
               </div>

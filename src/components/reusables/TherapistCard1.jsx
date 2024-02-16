@@ -1,6 +1,5 @@
 import React from "react";
 import StarRating from "../reusables/StarRating";
-import DoctorModal from "../Page Component/DoctorModal";
 
 const TherapistCard1 = ({ image, name, ratingNumber, therapistData }) => {
   return (
@@ -13,7 +12,6 @@ const TherapistCard1 = ({ image, name, ratingNumber, therapistData }) => {
           <span className="text-xs text-yellow-400 relative top-0">{`(${ratingNumber})`}</span>
         </div>
       </div>
-      <DoctorModal therapistData={therapistData} />
     </div>
   );
 };
