@@ -12,7 +12,6 @@ import TherapistCard2 from "../reusables/TherapistCard2";
 import { priceCard } from "../Data types/PriceData";
 import { data1 } from "../Data types/TherapistCardData1";
 import { data2 } from "../Data types/TherapistCardData2";
-import {ModalData} from "../Data types/ModalData";
 import Button from "../reusables/button";
 
 const Therapist = () => {
