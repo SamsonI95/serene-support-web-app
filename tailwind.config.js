@@ -8,6 +8,7 @@ export default {
         "nav-text-color": "#A3A3A3",
         "higlight-text-color": "#464646",
         "secondary-color": "#002261",
+        "other-secondary-color": "#00328D",
         "services-color": "#F3F7FE",
         "border-line-color": "#A3A3A3",
         "bcg-color": "#00CCFF"
@@ -26,6 +27,7 @@ export default {
         "143": "550px",
         "145": "579px",
         "170": "610px",
+        "180": "750px",
         "186": "836px",
         "200": "950px",
         "1240": "77.5rem",

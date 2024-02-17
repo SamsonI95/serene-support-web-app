@@ -22,19 +22,19 @@ const NavBar = () => {
       {/*Desktop Navigation*/}
       <section className="hidden md:flex no-underline text-nav-text-color text-2xl w-max  mt-4 relative">
         <div className="relative top-4 right-20 space-x-10">
-          <Link to="/home" className="hover:text-primary-color ">
+          <Link to="/home" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
             Home
           </Link>
-          <Link to="/services" className="hover:text-primary-color">
+          <Link to="/services" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
             Services
           </Link>
-          <Link to="/therapists" className="hover:text-primary-color">
+          <Link to="/therapists" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
             Therapists
           </Link>
-          <Link to="/privacy" className="hover:text-primary-color">
+          <Link to="/privacy" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
             Privacy
           </Link>
-          <Link to="/community" className="hover:text-primary-color">
+          <Link to="/community" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
             Community
           </Link>
         </div>
@@ -99,12 +99,14 @@ const NavBar = () => {
                 <Link
                   to="/privacy"
                   className="block text-white py-2 hover:text-primary-color  mb-10"
+                  onClick={handleToggleMobileMenu}
                 >
                   Privacy
                 </Link>
                 <Link
                   to="/community"
                   className="block text-white py-2 hover:text-primary-color  mb-20"
+                  onClick={handleToggleMobileMenu}
                 >
                   Community
                 </Link>

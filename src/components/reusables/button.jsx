@@ -36,7 +36,7 @@ const Button = ({ children, onClick, type, variant, size }) => {
         case "semi-medium":
         return "h-16 w-45 px-4 py-2 text-base rounded-2xl";
       case "large":
-        return "px-6 py-3 text-lg";
+        return "px-6 py-3 rounded-xl text-lg";
       case "sub-button":
         return "px-4  text-lg rounded-l-none rounded-r-lg";
       // Add more sizes as needed

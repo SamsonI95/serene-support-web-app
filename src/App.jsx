@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Therapist from "./components/pages/Therapist";
+import Privacy from "./components/pages/Privacy";
+import Community from "./components/pages/Community";
 
 import Header from "./components/reusables/Header";
 import Footer from "./components/reusables/Footer";
@@ -19,6 +21,8 @@ function App() {
       <Route path="/" element={<Root />}>
         <Route path="/home" element={<Home />} />
         <Route path="/therapists" element={<Therapist/>} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/community" element={<Community/>} />
       </Route>
     )
   );
