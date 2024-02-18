@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Button from "./button";
 
@@ -12,8 +13,11 @@ const NavBar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const navigate = useNavigate();
+
   const handleClick = () => {
     // Handle button click
+    navigate("/signin");
     setMobileMenuOpen(false);
   };
 
@@ -22,19 +26,34 @@ const NavBar = () => {
       {/*Desktop Navigation*/}
       <section className="hidden md:flex no-underline text-nav-text-color text-2xl w-max  mt-4 relative">
         <div className="relative top-4 right-20 space-x-10">
-          <Link to="/home" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
+          <Link
+            to="/home"
+            className="hover:text-primary-color focus:text-primary-color active:text-primary-color"
+          >
             Home
           </Link>
-          <Link to="/services" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
+          <Link
+            to="/services"
+            className="hover:text-primary-color focus:text-primary-color active:text-primary-color"
+          >
             Services
           </Link>
-          <Link to="/therapists" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
+          <Link
+            to="/therapists"
+            className="hover:text-primary-color focus:text-primary-color active:text-primary-color"
+          >
             Therapists
           </Link>
-          <Link to="/privacy" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
+          <Link
+            to="/privacy"
+            className="hover:text-primary-color focus:text-primary-color active:text-primary-color"
+          >
             Privacy
           </Link>
-          <Link to="/community" className="hover:text-primary-color focus:text-primary-color active:text-primary-color">
+          <Link
+            to="/community"
+            className="hover:text-primary-color focus:text-primary-color active:text-primary-color"
+          >
             Community
           </Link>
         </div>
@@ -61,11 +80,8 @@ const NavBar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <>
-          <div></div>
-            <div
-              className="fixed top-0 right-0 h-5/6 w-72 bg-secondary-color p-4 z-10 transform transition-transform ease-in-out duration-300 
-          ${isMobileMenuOpen ? translate-x-0 : translate-x-full}"
-            >
+            <div></div>
+            <div className="fixed top-0 right-0 h-full w-72 bg-secondary-color p-4 z-10">
               <button
                 onClick={handleToggleMobileMenu}
                 className="block text-black focus:outline-none float-end"
