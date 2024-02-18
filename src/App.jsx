@@ -12,6 +12,7 @@ import Therapist from "./components/pages/Therapist";
 import Privacy from "./components/pages/Privacy";
 import Community from "./components/pages/Community";
 import SignInPanel from "./components/pages/SignInPanel";
+import SignupPanel from "./components/pages/SignupPanel";
 
 import Header from "./components/reusables/Header";
 import Footer from "./components/reusables/Footer";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/community" element={<Community/>} />
         <Route path="/signin" element={<SignInPanel />} />
+        <Route path="/signup" element={<SignupPanel />} />
       </Route>
     )
   );
