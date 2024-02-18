@@ -44,7 +44,7 @@ const Footer = () => {
               />
             </Link>
             <Link
-              to="/contact"
+              to="/privacy"
               className="text-white hover:text-primary-color relative -right-24"
             >
               <Button
@@ -80,7 +80,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-5">
                   <Link
-                    to="/booking"
+                    to="/therapists"
                     className="text-white hover:text-primary-color"
                   >
                     Booking
@@ -206,7 +206,7 @@ const Footer = () => {
             </Link>
             <div className="translate-x-7 mt-28">
               <Link
-                to="/contact"
+                to="/privacy"
                 className="text-white hover:text-primary-color"
               >
                 <Button
@@ -243,7 +243,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-8">
                   <Link
-                    to="/booking"
+                    to="/therapists"
                     className="text-white hover:text-primary-color"
                   >
                     Booking
