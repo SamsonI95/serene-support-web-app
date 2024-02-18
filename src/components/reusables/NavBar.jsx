@@ -17,7 +17,7 @@ const NavBar = () => {
 
   const handleClick = () => {
     // Handle button click
-    navigate("/signin");
+    navigate("/signup");
     setMobileMenuOpen(false);
   };
 
@@ -64,7 +64,7 @@ const NavBar = () => {
           variant="primary"
           size="small"
         >
-          Sign In
+          Sign Up
         </Button>
       </section>
 
@@ -100,12 +100,6 @@ const NavBar = () => {
                   Home
                 </Link>
                 <Link
-                  to="/services"
-                  className="block text-white py-2 hover:text-primary-color  mb-10"
-                >
-                  Services
-                </Link>
-                <Link
                   to="/therapists"
                   className="block text-white py-2 hover:text-primary-color  mb-10"
                   onClick={handleToggleMobileMenu}
@@ -132,7 +126,7 @@ const NavBar = () => {
                   variant="primary"
                   size="small"
                 >
-                  Sign In
+                  Sign Up
                 </Button>
               </div>
             </div>

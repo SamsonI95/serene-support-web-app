@@ -78,46 +78,6 @@ const SignInPanel = () => {
                 </p>
               </div>
             </section>
-            <section>
-              <div className="flex justify-center my-8">
-                <h3 className="font-bold text-5xl mr-2">Partner</h3>
-                <p className="text-5xl text-primary-color"> with Us</p>
-              </div>
-
-              <div>
-                <img
-                  src="Assets\people.svg"
-                  alt="people"
-                  className="rounded-xl w-[481px] px-0"
-                />
-              </div>
-            </section>
-            <section>
-              <h3 className="my-9 font-bold text-2xl">
-                Join our growing list of valuable partners today!
-              </h3>
-              <div className="bg-[#F1F6FF] w-[480px] -translate-x-[29px] flex justify-center py-10">
-                <img src="Assets\shakehands.svg" alt="shake" />
-              </div>
-              <div className="bg-primary-color text-center py-3 rounded-xl my-8">
-                <h3 className="text-white">
-                  PLEASE COMPLETE THE PARTNERSHIP FORM BELOW
-                </h3>
-              </div>
-              <div className="flex flex-col justify-center mb-10">
-                <input type="text" placeholder="First Name" className="w-[400px] h-[50px] rounded-xl mb-8 indent-4 bg-gray-100 border border-gray-300"/>
-                <input type="text" placeholder="Last Name" className="w-[400px] h-[50px] rounded-xl mb-8 indent-4 bg-gray-100 border border-gray-300"/>
-                <input type="tel" placeholder="Phone Number" className="w-[400px] h-[50px] rounded-xl mb-8 indent-4 bg-gray-100 border border-gray-300"/>
-                <input type="email" placeholder="Email Address" className="w-[400px] h-[50px] rounded-xl mb-8 indent-4 bg-gray-100 border border-gray-300"/>
-                <input type="text" placeholder="City" className="w-[400px] h-[50px] rounded-xl mb-8 indent-4 bg-gray-100 border border-gray-300"/>
-                <input type="text" placeholder="State" className="w-[400px] h-[50px] rounded-xl mb-8 indent-4 bg-gray-100 border border-gray-300"/>
-              </div>
-              <div className="mb-8">
-                <Button type="button" variant="primary" size="medium">
-                  Submit
-                </Button>
-              </div>
-            </section>
             <section className="-translate-x-12">
               <div className="bg-bcg-color w-140 py-36 px-36">
                 <h3 className=" text-center -translate-x-20 font-semibold text-2xl w-96">
