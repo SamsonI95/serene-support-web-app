@@ -33,12 +33,6 @@ const NavBar = () => {
             Home
           </Link>
           <Link
-            to="/services"
-            className="hover:text-primary-color focus:text-primary-color active:text-primary-color"
-          >
-            Services
-          </Link>
-          <Link
             to="/therapists"
             className="hover:text-primary-color focus:text-primary-color active:text-primary-color"
           >

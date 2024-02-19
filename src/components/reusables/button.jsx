@@ -12,7 +12,7 @@ const Button = ({ children, onClick, type, variant, size }) => {
       case "secondary":
         return "bg-gray-300 hover:bg-gray-400 text-gray-800";
       case "white":
-        return "bg-white-500 border border-gray-500 flex items-center justify-center"  
+        return "bg-white-500 border border-gray-500 flex items-center justify-center";
       case "hollow":
         return "bg-white hover:bg-secondary-color hover:text-white text-primary-color border-primary-color border-solid border";
       case "hollow-small":
@@ -43,6 +43,8 @@ const Button = ({ children, onClick, type, variant, size }) => {
         return "px-4  text-lg rounded-l-none rounded-r-lg";
       case "signin":
         return "h-[47px] w-[330px] px-4 py-2 text-base rounded-xl";
+      case "signinL":
+        return "h-[60px] w-[350px] px-4 py-2 text-2xl rounded-xl";
       // Add more sizes as needed
       default:
         return "px-4 py-2 text-base";

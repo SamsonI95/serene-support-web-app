@@ -14,15 +14,12 @@ const SignupPanel = () => {
           <section className="md:flex md:items-center md:justify-between">
             <section>
               <div className="flex flex-col items-center">
-                <div className="mt-5">
-                  <img src="Assets\Group 250.png" alt="user" />
-                </div>
                 <div className="text-center my-10">
                   <h3 className="text-secondary-color font-medium text-2xl">
                     Welcome
                   </h3>
                   <p className="text-secondary-color font-bold text-3xl">
-                    Log in to your Account
+                    Create your Account
                   </p>
                 </div>
               </div>
@@ -169,6 +166,164 @@ const SignupPanel = () => {
               </div>
             </section>
           </section>
+        </section>
+
+        {/* Desktop SignIn Page */}
+        <section className="hidden max-w-[1440px] mx-auto px-24 md:flex items-center justify-between h-fit">
+          <section className="flex items-center">
+            <div>
+              <div className="my-10">
+                <h3 className="text-secondary-color font-medium text-5xl mb-5">
+                  Welcome
+                </h3>
+                <p className="text-secondary-color font-bold text-5xl">
+                  Log in to your Account
+                </p>
+              </div>
+              <div className="">
+                <div>
+                  <label
+                    className="block text-gray-700 text-2xl font-bold mb-2"
+                    htmlFor="email"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="w-[480px] h-[60px] border-[#464646] border rounded-xl mb-5 indent-4"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="block text-gray-700 text-2xl font-bold mb-2"
+                    htmlFor="password"
+                  >
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    className="w-[480px] h-[60px] border-[#464646] border rounded-xl mb-5 indent-4"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="block text-gray-700 text-2xl font-bold mb-2"
+                    htmlFor="password"
+                  >
+                    Confirm Password
+                  </label>
+                  <input
+                    type="password"
+                    className="w-[480px] h-[60px] border-[#464646] border rounded-xl mb-5 indent-4"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col items-center mt-20">
+                <Button type="button" variant="primary" size="signinL">
+                  Creat Account
+                </Button>
+                <p className="my-8">OR</p>
+                <Button type="button" variant="white" size="signinL">
+                  <img
+                    src="Assets\icons8-google-48 1.svg"
+                    alt="google"
+                    className="mr-3"
+                  />
+                  Continue with Google
+                </Button>
+              </div>
+              <div className="text-center mt-7 mb-10">
+                <p className="text-2xl">
+                  Already have an account?{" "}
+                  <Link to="/signin" className="text-primary-color font-bold">
+                    Sign In
+                  </Link>{" "}
+                </p>
+              </div>
+            </div>
+            <div className="absolute right-0 -z-10 bg-slate-300">
+              <img src="Assets\lady.svg" alt="lady" />
+            </div>
+          </section>
+        </section>
+        <section className="hidden lg:block w-full mt-[4rem]">
+          <div className="absolute left-[35%] mt-[6rem]">
+            <h3 className="font-semibold text-6xl">Partner with Us</h3>
+          </div>
+          <div>
+            <img
+              src="Assets\peopleL.svg"
+              alt="people"
+              style={{ width: "100%" }}
+            />
+          </div>
+        </section>
+        <section className="hidden lg:block w-full">
+          <div className="bg-[#F1F6FF]  flex justify-center py-10">
+            <img src="Assets\shakehandsL.svg" alt="shake" />
+          </div>
+          <div className="flex flex-col items-center justify-center mb-10">
+            <h3 className="my-9 font-bold text-2xl">
+              Join our growing list of valuable partners today!
+            </h3>
+            <div className="bg-primary-color w-[558px] text-center py-3 rounded-xl my-8">
+              <h3 className="text-white">
+                PLEASE COMPLETE THE PARTNERSHIP FORM BELOW
+              </h3>
+            </div>
+            <input
+              type="text"
+              placeholder="First Name"
+              className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
+            />
+            <input
+              type="text"
+              placeholder="City"
+              className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
+            />
+            <input
+              type="text"
+              placeholder="State"
+              className="w-[400px] h-[50px] rounded-xl mb-20 indent-4 bg-gray-100 border border-gray-300"
+            />
+            <div className="mb-8">
+              <Button type="button" variant="primary" size="medium">
+                Submit
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section className="hidden lg:block w-full">
+          <div className="bg-bcg-color py-48 px-48">
+            <h3 className=" text-center font-semibold text-5xl ">
+              Get latest News by subscribing to our Newsletter
+            </h3>
+            <div className="flex translate-y-10 justify-center">
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="bg-white text-xl indent-5 rounded-l-lg rounded-r-none w-80 h-20"
+              />
+              <Button type="button" variant="subscribe" size="sub-button">
+                Subscribe
+              </Button>
+            </div>
+          </div>
         </section>
       </section>
     </>
