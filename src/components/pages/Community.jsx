@@ -21,7 +21,7 @@ const Community = () => {
               <h3 className="text-secondary-color text-2xl font-bold w-80 my-20">
                 Never alone on this journey of Wellness
               </h3>
-              <img src="public/Assets/Mask groupalt.png" alt="hands" />
+              <img src="Assets/Mask groupalt.png" alt="hands" />
               <p className="text-sm text-justify w-80 my-5">
                 Whether you're seeking help for yourself, your relationship, or
                 your family, Serene Support community is here to provide
@@ -31,7 +31,7 @@ const Community = () => {
             </section>
             <section className="my-10">
               <div className="flex flex-col items-center">
-                <img src="public/Assets/Group 368.png" alt="network" />
+                <img src="Assets/Group 368.png" alt="network" />
                 <div>
                   <h3 className="font-bold text-xs text-center w-[230px] relative -top-32">
                     Connect with individuals on this path to wellness and build
@@ -86,7 +86,7 @@ const Community = () => {
                 <div className="flex items-center">
                   <div className="flex items-center border bg-servoce-color rounded-[100%] w-[27px] h-[27px]">
                     <img
-                      src="public/Assets/clock.svg"
+                      src="Assets/clock.svg"
                       alt="clock"
                       className="translate-x-[5.2px]"
                     />
@@ -96,7 +96,7 @@ const Community = () => {
                 <div className="flex items-center">
                   <div className="flex items-center border bg-servoce-color rounded-[100%] w-[27px] h-[27px]">
                     <img
-                      src="public/Assets/heart.svg"
+                      src="Assets/heart.svg"
                       alt="heart"
                       className="translate-x-[5.2px] translate-y-[2px]"
                     />
@@ -153,12 +153,12 @@ const Community = () => {
                     happier, healthier you.
                   </p>
                 </div>
-                <img src="public/Assets/Mask grouphands.svg" alt="hands" />
+                <img src="Assets/Mask grouphands.svg" alt="hands" />
               </div>
             </section>
             <section className="my-10">
               <div>
-                <img src="public/Assets/Group 151.png" alt="network" />
+                <img src="Assets/Group 151.png" alt="network" />
                 <h3 className="font-bold text-4xl text-center -translate-y-95">
                   Connect with individuals on this path to wellness and build
                   supportive community here in Serene Support
@@ -169,7 +169,7 @@ const Community = () => {
         </section>
         <section className="hidden lg:block">
           <div className="bg-services-color flex items-center p-9">
-            <img src="public\Assets\Mask groupalt2b.png" alt="smile" />
+            <img src="Assets\Mask groupalt2b.png" alt="smile" />
             <div className="mx-40">
               <h3 className="font-bold text-4xl mb-20">
                 5 Steps to reducing stress
@@ -213,7 +213,7 @@ const Community = () => {
               <div className="flex items-center scale-115">
                 <div className="flex items-center border bg-servoce-color rounded-[100%] w-[27px] h-[27px]">
                   <img
-                    src="public/Assets/clock.svg"
+                    src="Assets/clock.svg"
                     alt="clock"
                     className="translate-x-[5.2px]"
                   />
@@ -223,7 +223,7 @@ const Community = () => {
               <div className="flex items-center scale-115">
                 <div className="flex items-center border bg-servoce-color rounded-[100%] w-[27px] h-[27px]">
                   <img
-                    src="public/Assets/heart.svg"
+                    src="Assets/heart.svg"
                     alt="heart"
                     className="translate-x-[5.2px] translate-y-[2px]"
                   />
