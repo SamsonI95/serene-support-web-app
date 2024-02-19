@@ -28,7 +28,7 @@ const Home = () => {
             </section>
             <section>
               <img
-                src="public/Assets/nathan-anderson-J3Xjyg5m8kY-unsplash 1.png"
+                src="Assets/nathan-anderson-J3Xjyg5m8kY-unsplash 1.png"
                 alt="smiles"
               />
             </section>
@@ -52,10 +52,10 @@ const Home = () => {
                 Trusted by organizations like
               </div>
               <div className="flex justify-center space-x-6 mb-10">
-                <img src="public/Assets/WHO 1.png" alt="who" />
-                <img src="public/Assets/images-2 1.png" alt="sponsor" />
+                <img src="Assets/WHO 1.png" alt="who" />
+                <img src="Assets/images-2 1.png" alt="sponsor" />
                 <img
-                  src="public/Assets/Screenshot 2023-08-09 at 19.43 1.png"
+                  src="Assets/Screenshot 2023-08-09 at 19.43 1.png"
                   alt="nami"
                 />
               </div>
@@ -99,7 +99,7 @@ const Home = () => {
               <div>
                 <div>
                   <img
-                    src="public/Assets/Dr alexander.png"
+                    src="Assets/Dr alexander.png"
                     alt="doc1"
                     className="scale-75 relative -left-8"
                   />
@@ -201,7 +201,7 @@ const Home = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center">
-                <img src="public/Assets/iPhone 15.svg" alt="phone" />
+                <img src="Assets/iPhone 15.svg" alt="phone" />
               </div>
               <div className="mt-20 flex text-center space-x-5">
                 <div>
@@ -277,7 +277,7 @@ const Home = () => {
 
               <div>
                 <img
-                  src="public/Assets/nathan-anderson-J3Xjyg5m8kY-unsplash 1.png"
+                  src="Assets/nathan-anderson-J3Xjyg5m8kY-unsplash 1.png"
                   alt="smiles"
                   style={{ width: "610px", height: "610px" }}
                 />
@@ -288,10 +288,10 @@ const Home = () => {
                 Trusted by organizations like
               </div>
               <div className="flex items-center justify-center space-x-40">
-                <img src="public/Assets/WHO 1.png" alt="who" />
-                <img src="public/Assets/images-2 1.png" alt="sponsor" />
+                <img src="Assets/WHO 1.png" alt="who" />
+                <img src="Assets/images-2 1.png" alt="sponsor" />
                 <img
-                  src="public/Assets/Screenshot 2023-08-09 at 19.43 1.png"
+                  src="Assets/Screenshot 2023-08-09 at 19.43 1.png"
                   alt="nami"
                 />
               </div>
@@ -337,7 +337,7 @@ const Home = () => {
               <div className="grid grid-cols-2">
                 <div className="flex relative">
                   <img
-                    src="public/Assets/Dr alexander.png"
+                    src="Assets/Dr alexander.png"
                     alt="doc1"
                     className="scale-75 relative -left-8"
                   />
@@ -432,7 +432,7 @@ const Home = () => {
             </section>
             <section className="flex justify-evenly space-x-30 mt-40">
               <div className="">
-                <img src="public/Assets/iPhone 14.png" alt="phone" />
+                <img src="Assets/iPhone 14.png" alt="phone" />
               </div>
               <div className="mb-10 translate-x-28">
                 <h3 className="font-semibold text-4xl  mb-5">
