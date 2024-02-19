@@ -1,18 +1,18 @@
 export const newsData = [
   {
-    image: "public/Assets/Mask groupalt3.svg",
+    image: "Assets/Mask groupalt3.svg",
     title: "News 1",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
   },
   {
-    image: "public/Assets/Mask groupalt4.svg",
+    image: "Assets/Mask groupalt4.svg",
     title: "News 2",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
   },
   {
-    image: "public/Assets/Mask groupalt5.svg",
+    image: "Assets/Mask groupalt5.svg",
     title: "News 3",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
