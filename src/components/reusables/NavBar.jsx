@@ -1,10 +1,18 @@
+//App
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Button from "./button";
 
+//Component
+import Button from "./button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+
+//Server
+import { auth } from "../../config/firebase";
+import { signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,6 +28,7 @@ const NavBar = () => {
     navigate("/signup");
     setMobileMenuOpen(false);
   };
+
 
   return (
     <>
@@ -52,6 +61,7 @@ const NavBar = () => {
           </Link>
         </div>
         {/* Small Primary Button */}
+
         <Button
           onClick={handleClick}
           type="button"
@@ -75,7 +85,7 @@ const NavBar = () => {
         {isMobileMenuOpen && (
           <>
             <div></div>
-            <div className="fixed top-0 right-0 h-full w-72 bg-secondary-color p-4 z-10">
+            <div className="fixed top-0 right-0 h-[700px] w-72 bg-secondary-color p-4 z-10 }">
               <button
                 onClick={handleToggleMobileMenu}
                 className="block text-black focus:outline-none float-end"
@@ -85,7 +95,15 @@ const NavBar = () => {
                   className="w-10 h-10 text-white mb-10 left-7"
                 />
               </button>
-              <div className="translate-x-5">
+              <div className="translate-x-5 translate-y-5">
+                <Button
+                  onClick={handleClick}
+                  type="button"
+                  variant="primary"
+                  size="small"
+                >
+                  Sign Up
+                </Button>
                 <Link
                   to="/home"
                   className="block text-white py-2 hover:text-primary-color mt-20 mb-10"
@@ -114,14 +132,6 @@ const NavBar = () => {
                 >
                   Community
                 </Link>
-                <Button
-                  onClick={handleClick}
-                  type="button"
-                  variant="primary"
-                  size="small"
-                >
-                  Sign Up
-                </Button>
               </div>
             </div>
           </>

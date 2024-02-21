@@ -1,11 +1,47 @@
 //App
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 //Component
 import Button from "../reusables/button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
+//Server
+import { auth } from "../../config/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const SignInPanel = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const navigate = useNavigate();
+
+  //handle password visibility
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevVisible) => !prevVisible);
+  };
+
+  //Form submission logic
+  const login = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Create user with email and password
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/home");
+      // Handle successful registration
+      console.log("Logged successfully!");
+      alert("Logged In successfully!");
+    } catch (error) {
+      // Handle errors
+      alert("Error!!");
+      console.error("Error adding user:", error.message);
+    }
+  };
+
   return (
     <>
       <section>
@@ -33,7 +69,9 @@ const SignInPanel = () => {
                   </label>
                   <input
                     type="email"
-                    className="w-[330px] h-[40px] border-[#464646] border rounded-xl mb-5 indent-4"
+                    value={email}
+                    className="w-[330px] h-[40px] border-[#464646] border rounded-xl mb-5 indent-4 mr-2"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div>
@@ -44,16 +82,32 @@ const SignInPanel = () => {
                     Password
                   </label>
                   <input
-                    type="password"
+                    type={passwordVisible ? "text" : "password"}
+                    value={password}
                     className="w-[330px] h-[40px] border-[#464646] border rounded-xl mb-5 indent-4"
+                    onChange={(e) => setPassword(e.target.value)}
                   />
+                  <button
+                    type="button"
+                    className="relative -left-8"
+                    onClick={togglePasswordVisibility}
+                  >
+                    <FontAwesomeIcon
+                      icon={passwordVisible ? faEyeSlash : faEye}
+                    />
+                  </button>
                 </div>
               </div>
               <div className="float-right relative right-12">
                 <p className="text-primary-color font-bold">Forgot Password</p>
               </div>
               <div className="flex flex-col items-center mt-20">
-                <Button type="button" variant="primary" size="signin">
+                <Button
+                  type="button"
+                  variant="primary"
+                  size="signin"
+                  onClick={login}
+                >
                   Sign In
                 </Button>
                 <p className="my-8">OR</p>
@@ -131,7 +185,9 @@ const SignInPanel = () => {
                   </label>
                   <input
                     type="email"
+                    value={email}
                     className="w-[480px] h-[60px] border-[#464646] border rounded-xl mb-5 indent-4"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div>
@@ -142,16 +198,32 @@ const SignInPanel = () => {
                     Password
                   </label>
                   <input
-                    type="password"
+                    type={passwordVisible ? "text" : "password"}
+                    value={password}
                     className="w-[480px] h-[60px] border-[#464646] border rounded-xl mb-5 indent-4"
+                    onChange={(e) => setPassword(e.target.value)}
                   />
+                  <button
+                    type="button"
+                    className="relative -left-8"
+                    onClick={togglePasswordVisibility}
+                  >
+                    <FontAwesomeIcon
+                      icon={passwordVisible ? faEyeSlash : faEye}
+                    />
+                  </button>
                 </div>
               </div>
               <div className="float-right">
                 <p className="text-primary-color font-bold">Forgot Password</p>
               </div>
               <div className="flex flex-col items-center mt-20">
-                <Button type="button" variant="primary" size="signinL">
+                <Button
+                  type="button"
+                  variant="primary"
+                  size="signinL"
+                  onClick={login}
+                >
                   Sign In
                 </Button>
                 <p className="my-8">OR</p>

@@ -45,6 +45,8 @@ const Button = ({ children, onClick, type, variant, size }) => {
         return "h-[47px] w-[330px] px-4 py-2 text-base rounded-xl";
       case "signinL":
         return "h-[60px] w-[350px] px-4 py-2 text-2xl rounded-xl";
+      case "alt":
+        return "h-16 w-[120px] px-2 py-1 text-lg rounded-2xl";
       // Add more sizes as needed
       default:
         return "px-4 py-2 text-base";
