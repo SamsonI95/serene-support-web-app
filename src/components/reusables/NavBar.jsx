@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 //Component
 import Button from "./button";
+import Authentication from "./Authentication";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -28,7 +29,6 @@ const NavBar = () => {
     navigate("/signup");
     setMobileMenuOpen(false);
   };
-
 
   return (
     <>
@@ -61,15 +61,7 @@ const NavBar = () => {
           </Link>
         </div>
         {/* Small Primary Button */}
-
-        <Button
-          onClick={handleClick}
-          type="button"
-          variant="primary"
-          size="small"
-        >
-          Sign Up
-        </Button>
+        <Authentication />
       </section>
 
       {/* Mobile Navigation */}
@@ -96,14 +88,7 @@ const NavBar = () => {
                 />
               </button>
               <div className="translate-x-5 translate-y-5">
-                <Button
-                  onClick={handleClick}
-                  type="button"
-                  variant="primary"
-                  size="small"
-                >
-                  Sign Up
-                </Button>
+                <Authentication/>
                 <Link
                   to="/home"
                   className="block text-white py-2 hover:text-primary-color mt-20 mb-10"

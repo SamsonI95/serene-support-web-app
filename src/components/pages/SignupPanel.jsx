@@ -273,7 +273,7 @@ const SignupPanel = () => {
                   Welcome
                 </h3>
                 <p className="text-secondary-color font-bold text-5xl">
-                  Log in to your Account
+                  Create your Account
                 </p>
               </div>
               <div className="">
@@ -358,8 +358,8 @@ const SignupPanel = () => {
           <div className="bg-[#F1F6FF]  flex justify-center py-10">
             <img src="Assets\shakehandsL.svg" alt="shake" />
           </div>
-          <div className="flex flex-col items-center justify-center mb-10">
-            <form>
+          <div >
+            <form className="flex flex-col items-center justify-center mb-10">
               <h3 className="my-9 font-bold text-2xl">
                 Join our growing list of valuable partners today!
               </h3>
