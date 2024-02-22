@@ -59,7 +59,7 @@ const NavBar = () => {
     <>
       {/*Desktop Navigation*/}
       <section className="hidden md:flex no-underline text-nav-text-color text-2xl w-max  mt-4 relative">
-        <div className="relative top-4 right-20 space-x-10">
+        <div className="relative top-4 right-10 space-x-9">
           <Link
             to="/home"
             className="hover:text-primary-color focus:text-primary-color active:text-primary-color"
@@ -87,8 +87,8 @@ const NavBar = () => {
         </div>
         {/* Small Primary Button */}
         {user ? (
-          <div className="flex items-center space-x-5">
-            <p>Welcome, {user.firstName || user.email}!</p>
+          <div className="flex items-center space-x-3">
+            <p className="text-lg">Welcome, {user.firstName || user.email}!</p>
             <Button
               onClick={userSignOut}
               type="button"

@@ -10,6 +10,7 @@ import TherapistCard2 from "../reusables/TherapistCard2";
 
 //Data type
 import { priceCard } from "../Data types/PriceData";
+import { mdata } from "../Data types/ModalData";
 import { data1 } from "../Data types/TherapistCardData1";
 import { data2 } from "../Data types/TherapistCardData2";
 import Button from "../reusables/button";
@@ -79,8 +80,8 @@ const Therapist = () => {
                 </button>
               </div>
               <div className="grid grid-cols-2 gap-6 mb-10">
-                {data1 &&
-                  data1.map((therapists) => (
+                {mdata &&
+                  mdata.map((therapists) => (
                     <div key={therapists.id} className="cursor-pointer">
                       <TherapistCard1 {...therapists} />
                     </div>

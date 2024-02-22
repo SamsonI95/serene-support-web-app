@@ -1,9 +1,9 @@
 export const mdata = [
     {
-        image: "public/Assets/doctest1.png",
+        image: "Assets/Mask group5.png",
         name: "Dr. Olayemi Ojo",
         role: "Certified Psychotherpist and Depression Counsellor",
-        rating: "5.0",
+        ratingNumber: "5.0",
         session: "(54 Sessions conducted)",
         sessionType: [
             {item:"Individual"},
@@ -19,5 +19,30 @@ export const mdata = [
             {item: "2018 - Certificate in Clinical Psychology"},
             {item: "2020 - Certificate in Psychotherapy and Depression Aid"},
         ]
-    }
+    },
+    {
+        image: "Assets/Mask group6.png",
+        name: "Dr. Hilary James",
+        ratingNumber: "5.0",
+    },
+    {
+        image: "Assets/Mask group7.png",
+        name: "Dr. Prince Stone",
+        ratingNumber: "5.0",
+    },
+    {
+        image: "Assets/Mask group8.png",
+        name: "Dr. Chen Julian",
+        ratingNumber: "5.0",
+    },
+    {
+        image: "Assets/Mask group9.png",
+        name: "Dr. Tom Nwachukwu",
+        ratingNumber: "5.0",
+    },
+    {
+        image: "Assets/Mask group10.png",
+        name: "Dr. Alison Frank",
+        ratingNumber: "5.0",
+    },
 ]
