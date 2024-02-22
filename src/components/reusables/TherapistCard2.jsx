@@ -117,7 +117,7 @@ const TherapistCard2 = ({
               </div>
             </div>
 
-            <div className="flex justify-center -translate-y-10">
+            <div className="flex justify-center -translate-y-10npm ">
               <Button type="button" variant="primary" size="small">
                 Book a Session
               </Button>
