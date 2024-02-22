@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 //Component
 import Button from "./button";
-import Authentication from "./Authentication";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,6 +16,16 @@ import { onAuthStateChanged } from "firebase/auth";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+
+    // Cleanup the observer when the component is unmounted
+    return () => unsubscribe();
+  }, []);
 
   const handleToggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -24,10 +33,26 @@ const NavBar = () => {
 
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const userSignIn = () => {
+    // Handle button click
+    navigate("/signin");
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const userSignUp = () => {
     // Handle button click
     navigate("/signup");
-    setMobileMenuOpen(false);
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const userSignOut = async () => {
+    try {
+      await signOut(auth);
+      setMobileMenuOpen(!isMobileMenuOpen);
+      // You may want to navigate or perform additional actions after sign-out
+    } catch (error) {
+      console.error("Error signing out", error);
+    }
   };
 
   return (
@@ -61,7 +86,38 @@ const NavBar = () => {
           </Link>
         </div>
         {/* Small Primary Button */}
-        <Authentication />
+        {user ? (
+          <div className="flex items-center space-x-5">
+            <p>Welcome, {user.firstName || user.email}!</p>
+            <Button
+              onClick={userSignOut}
+              type="button"
+              variant="primary"
+              size="small"
+            >
+              Sign Out
+            </Button>
+          </div>
+        ) : (
+          <div className="space-x-8">
+            <Button
+              onClick={userSignIn}
+              type="button"
+              variant="primary"
+              size="small"
+            >
+              Sign In
+            </Button>
+            <Button
+              onClick={userSignUp}
+              type="button"
+              variant="primary"
+              size="small"
+            >
+              Sign Up
+            </Button>
+          </div>
+        )}
       </section>
 
       {/* Mobile Navigation */}
@@ -88,7 +144,38 @@ const NavBar = () => {
                 />
               </button>
               <div className="translate-x-5 translate-y-5">
-                <Authentication/>
+                {user ? (
+                  <div className="space-y-5">
+                    <p className="text-white translate-y-10 mb-10">Welcome, {user.firstName || user.email}!</p>
+                    <Button
+                      onClick={userSignOut}
+                      type="button"
+                      variant="primary"
+                      size="small"
+                    >
+                      Sign Out
+                    </Button>
+                  </div>
+                ) : (
+                  <div className="flex space-x-3 mt-10">
+                    <Button
+                      onClick={userSignIn}
+                      type="button"
+                      variant="primary"
+                      size="small"
+                    >
+                      Sign In
+                    </Button>
+                    <Button
+                      onClick={userSignUp}
+                      type="button"
+                      variant="primary"
+                      size="small"
+                    >
+                      Sign Up
+                    </Button>
+                  </div>
+                )}
                 <Link
                   to="/home"
                   className="block text-white py-2 hover:text-primary-color mt-20 mb-10"

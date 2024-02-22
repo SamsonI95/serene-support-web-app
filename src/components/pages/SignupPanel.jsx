@@ -29,7 +29,14 @@ const SignupPanel = () => {
   const navigate = useNavigate();
   const send = async () => {
     try {
-      await addDoc(dbref, { firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber, city: city, state: state});
+      await addDoc(dbref, {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phoneNumber: phoneNumber,
+        city: city,
+        state: state,
+      });
       alert("Data added successfully");
       navigate("/signin");
     } catch (error) {}
@@ -287,6 +294,7 @@ const SignupPanel = () => {
                   <input
                     type="email"
                     className="w-[480px] h-[60px] border-[#464646] border rounded-xl mb-5 indent-4"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div>
@@ -297,9 +305,19 @@ const SignupPanel = () => {
                     Password
                   </label>
                   <input
-                    type="password"
+                    type={passwordVisible ? "text" : "password"}
                     className="w-[480px] h-[60px] border-[#464646] border rounded-xl mb-5 indent-4"
+                    onChange={(e) => setPassword(e.target.value)}
                   />
+                  <button
+                    type="button"
+                    className="relative -left-8"
+                    onClick={togglePasswordVisibility}
+                  >
+                    <FontAwesomeIcon
+                      icon={passwordVisible ? faEyeSlash : faEye}
+                    />
+                  </button>
                 </div>
                 <div>
                   <label
@@ -309,13 +327,19 @@ const SignupPanel = () => {
                     Confirm Password
                   </label>
                   <input
-                    type="password"
+                    type={passwordVisible ? "text" : "password"}
                     className="w-[480px] h-[60px] border-[#464646] border rounded-xl mb-5 indent-4"
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                 </div>
               </div>
               <div className="flex flex-col items-center mt-20">
-                <Button type="button" variant="primary" size="signinL">
+                <Button
+                  type="button"
+                  variant="primary"
+                  size="signinL"
+                  onClick={register}
+                >
                   Creat Account
                 </Button>
                 <p className="my-8">OR</p>
@@ -358,8 +382,8 @@ const SignupPanel = () => {
           <div className="bg-[#F1F6FF]  flex justify-center py-10">
             <img src="Assets\shakehandsL.svg" alt="shake" />
           </div>
-          <div >
-            <form className="flex flex-col items-center justify-center mb-10">
+          <div>
+            <form className="flex flex-col items-center justify-center mb-10" ref={partnershipFormRef}>
               <h3 className="my-9 font-bold text-2xl">
                 Join our growing list of valuable partners today!
               </h3>
@@ -371,35 +395,47 @@ const SignupPanel = () => {
               <input
                 type="text"
                 placeholder="First Name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
                 className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
               />
               <input
                 type="text"
                 placeholder="Last Name"
+                value={lastName}
+                onChange={(e) => setLastame(e.target.value)}
                 className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
               />
               <input
                 type="tel"
                 placeholder="Phone Number"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
                 className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
               />
               <input
                 type="email"
                 placeholder="Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
               />
               <input
                 type="text"
                 placeholder="City"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
                 className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
               />
               <input
                 type="text"
                 placeholder="State"
+                value={state}
+                onChange={(e) => setState(e.target.value)}
                 className="w-[400px] h-[50px] rounded-xl mb-20 indent-4 bg-gray-100 border border-gray-300"
               />
               <div className="mb-8">
-                <Button type="button" variant="primary" size="medium">
+                <Button type="button" variant="primary" size="medium" onClick={send}>
                   Submit
                 </Button>
               </div>
