@@ -1,5 +1,6 @@
 //App
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -9,8 +10,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 //Server
-import { auth } from "../../config/firebase";
+import { auth, provider } from "../../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { getRedirectResult } from "firebase/auth";
 
 const SignInPanel = () => {
   const [email, setEmail] = useState("");
@@ -23,6 +26,43 @@ const SignInPanel = () => {
   const togglePasswordVisibility = () => {
     setPasswordVisible((prevVisible) => !prevVisible);
   };
+
+  // Google Sign-In function
+  const googleclick = async () => {
+    await signInWithPopup(auth, provider);
+    console.log("Google Sign");
+    navigate("/home");
+  };
+
+  //using redirect for mobile platfrom
+  const googlerClick = async () => {
+    try {
+      // Trigger sign-in with redirect
+      await signInWithRedirect(auth, provider);
+      alert("Signed in successfully");
+      navigate("/home")
+    } catch (error) {
+      console.error(
+        "Error during Google sign-in with redirect:",
+        error.message
+      );
+    }
+  };
+
+  // Check for redirect result when the component mounts
+  useEffect(() => {
+    const checkRedirectResult = async () => {
+      try {
+        const result = await getRedirectResult(auth);
+        // Handle the redirect result, e.g., update UI or navigate to a new page
+        console.log("Redirect result:", result);
+      } catch (error) {
+        console.error("Error checking redirect result:", error.message);
+      }
+    };
+
+    checkRedirectResult();
+  }, []);
 
   //Form submission logic
   const login = async (e) => {
@@ -46,7 +86,7 @@ const SignInPanel = () => {
     <>
       <section>
         <section className="md:hidden px-7">
-          {/*Mbile SignIn Page*/}
+          {/*Mobile SignIn Page*/}
           <section className="md:flex md:items-center md:justify-between">
             <section>
               <div className="flex flex-col items-center">
@@ -111,7 +151,12 @@ const SignInPanel = () => {
                   Sign In
                 </Button>
                 <p className="my-8">OR</p>
-                <Button type="button" variant="white" size="signin">
+                <Button
+                  type="button"
+                  variant="white"
+                  size="signin"
+                  onClick={googlerClick}
+                >
                   <img
                     src="Assets\icons8-google-48 1.svg"
                     alt="google"
@@ -227,7 +272,12 @@ const SignInPanel = () => {
                   Sign In
                 </Button>
                 <p className="my-8">OR</p>
-                <Button type="button" variant="white" size="signinL">
+                <Button
+                  type="button"
+                  variant="white"
+                  size="signinL"
+                  onClick={googleclick}
+                >
                   <img
                     src="Assets\icons8-google-48 1.svg"
                     alt="google"

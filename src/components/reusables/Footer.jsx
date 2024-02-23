@@ -38,7 +38,7 @@ const Footer = () => {
           <section className="flex mt-16">
             <Link to="/home" className="-mx-2">
               <img
-                src="public/Assets/logowhite.png"
+                src="Assets/logowhite.png"
                 alt="logo-icon"
                 className="scale-75"
               />
@@ -199,7 +199,7 @@ const Footer = () => {
           <section className="relative top-16 w-fit">
             <Link to="/home">
               <img
-                src="public/Assets/logowhite.png"
+                src="Assets/logowhite.png"
                 alt="logo-icon"
                 className="scale-75"
               />
@@ -318,7 +318,7 @@ const Footer = () => {
             <div className="w-1240 h-1 bg-white mb-12"></div>
           </section>
           <section className="flex justify-evenly bottom-0">
-            <div className="flex text-white">
+            <div className="flex text-white space-x-5">
               <h3>2023</h3>
               <h4 className="font-light">SerenSupport</h4>
             </div>

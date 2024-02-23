@@ -5,71 +5,183 @@ export const data2 = [
     name: "Dr. Olayemi Ojo",
     role: "Certified Psychotherpist and Depression Counsellor",
     ratingNumber: "5.0",
-content:
-  "Lorem ipsum dolor sit amet, consecte tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+    content:
+      "Lorem ipsum dolor sit amet, consecte tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
     session: "(54 Sessions conducted)",
     sessionType: [
-        {item:"Individual"},
-        {item:"Couples"},
-        {item:"Group"},
+      { item: "Individual" },
+      { item: "Couples" },
+      { item: "Group" },
     ],
     biography: [
-        {item: "Psychotherapist"},
-        {item: "Specialization in Depression Aid"},
+      { item: "Psychotherapist" },
+      { item: "Specialization in Depression Aid" },
     ],
     education: [
-        {item: "1997 - Medical Degree, Harvard University"},
-        {item: "2018 - Certificate in Clinical Psychology"},
-        {item: "2020 - Certificate in Psychotherapy and Depression Aid"},
-    ]
-},
+      { item: "1997 - Medical Degree, Harvard University" },
+      { item: "2018 - Certificate in Clinical Psychology" },
+      { item: "2020 - Certificate in Psychotherapy and Depression Aid" },
+    ],
+  },
   {
     image: "Assets/Mask groupn3.png",
     name: "Dr. Prince Stone",
+    role: "Certified Psychotherpist and Depression Counsellor",
     ratingNumber: "5.0",
     content:
       "Lorem ipsum dolor sit amet, consecte tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+    session: "(54 Sessions conducted)",
+    sessionType: [
+      { item: "Individual" },
+      { item: "Couples" },
+      { item: "Group" },
+    ],
+    biography: [
+      { item: "Psychotherapist" },
+      { item: "Specialization in Depression Aid" },
+    ],
+    education: [
+      { item: "1997 - Medical Degree, Harvard University" },
+      { item: "2018 - Certificate in Clinical Psychology" },
+      { item: "2020 - Certificate in Psychotherapy and Depression Aid" },
+    ],
   },
   {
     image: "Assets/Mask groupn4.png",
     name: "Dr. Chen Julian",
+    role: "Certified Psychotherpist and Depression Counsellor",
     ratingNumber: "5.0",
     content:
       "Lorem ipsum dolor sit amet, consecte tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+    session: "(54 Sessions conducted)",
+    sessionType: [
+      { item: "Individual" },
+      { item: "Couples" },
+      { item: "Group" },
+    ],
+    biography: [
+      { item: "Psychotherapist" },
+      { item: "Specialization in Depression Aid" },
+    ],
+    education: [
+      { item: "1997 - Medical Degree, Harvard University" },
+      { item: "2018 - Certificate in Clinical Psychology" },
+      { item: "2020 - Certificate in Psychotherapy and Depression Aid" },
+    ],
   },
   {
     image: "Assets/Mask groupn5.png",
     name: "Dr. Tom Nwachukwu",
+    role: "Certified Psychotherpist and Depression Counsellor",
     ratingNumber: "5.0",
     content:
       "Lorem ipsum dolor sit amet, consecte tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+    session: "(54 Sessions conducted)",
+    sessionType: [
+      { item: "Individual" },
+      { item: "Couples" },
+      { item: "Group" },
+    ],
+    biography: [
+      { item: "Psychotherapist" },
+      { item: "Specialization in Depression Aid" },
+    ],
+    education: [
+      { item: "1997 - Medical Degree, Harvard University" },
+      { item: "2018 - Certificate in Clinical Psychology" },
+      { item: "2020 - Certificate in Psychotherapy and Depression Aid" },
+    ],
   },
   {
     image: "Assets/Mask groupn6.png",
     name: "Dr. Alison Frank",
+    role: "Certified Psychotherpist and Depression Counsellor",
     ratingNumber: "5.0",
     content:
       "Lorem ipsum dolor sit amet, consecte tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+    session: "(54 Sessions conducted)",
+    sessionType: [
+      { item: "Individual" },
+      { item: "Couples" },
+      { item: "Group" },
+    ],
+    biography: [
+      { item: "Psychotherapist" },
+      { item: "Specialization in Depression Aid" },
+    ],
+    education: [
+      { item: "1997 - Medical Degree, Harvard University" },
+      { item: "2018 - Certificate in Clinical Psychology" },
+      { item: "2020 - Certificate in Psychotherapy and Depression Aid" },
+    ],
   },
   {
     image: "Assets/Mask group11.png",
     name: "Dr. Kris Srini",
+    role: "Certified Psychotherpist and Depression Counsellor",
     ratingNumber: "5.0",
     content:
       "Lorem ipsum dolor sit amet, consecte tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+    session: "(54 Sessions conducted)",
+    sessionType: [
+      { item: "Individual" },
+      { item: "Couples" },
+      { item: "Group" },
+    ],
+    biography: [
+      { item: "Psychotherapist" },
+      { item: "Specialization in Depression Aid" },
+    ],
+    education: [
+      { item: "1997 - Medical Degree, Harvard University" },
+      { item: "2018 - Certificate in Clinical Psychology" },
+      { item: "2020 - Certificate in Psychotherapy and Depression Aid" },
+    ],
   },
   {
     image: "Assets/Mask group12.png",
     name: "Dr. Hayley Jackson",
+    role: "Certified Psychotherpist and Depression Counsellor",
     ratingNumber: "5.0",
     content:
       "Lorem ipsum dolor sit amet, consecte tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+    session: "(54 Sessions conducted)",
+    sessionType: [
+      { item: "Individual" },
+      { item: "Couples" },
+      { item: "Group" },
+    ],
+    biography: [
+      { item: "Psychotherapist" },
+      { item: "Specialization in Depression Aid" },
+    ],
+    education: [
+      { item: "1997 - Medical Degree, Harvard University" },
+      { item: "2018 - Certificate in Clinical Psychology" },
+      { item: "2020 - Certificate in Psychotherapy and Depression Aid" },
+    ],
   },
   {
     image: "Assets/Mask group13.png",
     name: "Dr. Monica Uju",
+    role: "Certified Psychotherpist and Depression Counsellor",
     ratingNumber: "5.0",
     content:
       "Lorem ipsum dolor sit amet, consecte tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ",
+    session: "(54 Sessions conducted)",
+    sessionType: [
+      { item: "Individual" },
+      { item: "Couples" },
+      { item: "Group" },
+    ],
+    biography: [
+      { item: "Psychotherapist" },
+      { item: "Specialization in Depression Aid" },
+    ],
+    education: [
+      { item: "1997 - Medical Degree, Harvard University" },
+      { item: "2018 - Certificate in Clinical Psychology" },
+      { item: "2020 - Certificate in Psychotherapy and Depression Aid" },
+    ],
   },
 ];

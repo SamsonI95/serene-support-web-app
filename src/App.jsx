@@ -20,7 +20,7 @@ import Footer from "./components/reusables/Footer";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Root />}>
+      <Route path="/" element={<Root/>}>
         <Route path="/home" element={<Home />} />
         <Route path="/therapists" element={<Therapist/>} />
         <Route path="/privacy" element={<Privacy />} />

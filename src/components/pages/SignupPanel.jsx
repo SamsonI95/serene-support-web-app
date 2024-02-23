@@ -14,6 +14,7 @@ import { db } from "../../config/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
+
 const SignupPanel = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -70,6 +71,7 @@ const SignupPanel = () => {
       partnershipFormRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
 
   return (
     <>
@@ -149,7 +151,11 @@ const SignupPanel = () => {
                     Create Account
                   </Button>
                   <p className="my-8">OR</p>
-                  <Button type="button" variant="white" size="signin">
+                   <Button
+                    type="button"
+                    variant="white"
+                    size="signin"
+                  >
                     <img
                       src="Assets\icons8-google-48 1.svg"
                       alt="google"
@@ -383,7 +389,10 @@ const SignupPanel = () => {
             <img src="Assets\shakehandsL.svg" alt="shake" />
           </div>
           <div>
-            <form className="flex flex-col items-center justify-center mb-10" ref={partnershipFormRef}>
+            <form
+              className="flex flex-col items-center justify-center mb-10"
+              ref={partnershipFormRef}
+            >
               <h3 className="my-9 font-bold text-2xl">
                 Join our growing list of valuable partners today!
               </h3>
@@ -435,7 +444,12 @@ const SignupPanel = () => {
                 className="w-[400px] h-[50px] rounded-xl mb-20 indent-4 bg-gray-100 border border-gray-300"
               />
               <div className="mb-8">
-                <Button type="button" variant="primary" size="medium" onClick={send}>
+                <Button
+                  type="button"
+                  variant="primary"
+                  size="medium"
+                  onClick={send}
+                >
                   Submit
                 </Button>
               </div>

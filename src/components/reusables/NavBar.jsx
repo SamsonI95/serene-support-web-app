@@ -88,7 +88,7 @@ const NavBar = () => {
         {/* Small Primary Button */}
         {user ? (
           <div className="flex items-center space-x-3">
-            <p className="text-lg">Welcome, {user.firstName || user.email}!</p>
+            <p className="text-lg">Welcome, {user.displayName || user.email}!</p>
             <Button
               onClick={userSignOut}
               type="button"
@@ -146,7 +146,9 @@ const NavBar = () => {
               <div className="translate-x-5 translate-y-5">
                 {user ? (
                   <div className="space-y-5">
-                    <p className="text-white translate-y-10 mb-10">Welcome, {user.firstName || user.email}!</p>
+                    <p className="text-white translate-y-10 mb-10">
+                      Welcome, {user.displayName || user.email}!
+                    </p>
                     <Button
                       onClick={userSignOut}
                       type="button"

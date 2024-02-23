@@ -52,7 +52,7 @@ const TherapistCard2 = ({
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center z-10">
-          <div className="bg-white px-5 py-4 mt-10 mb-10 rounded-lg">
+          <div className="bg-white w-[700px] h-[600px] px-5 py-4 mt-10 mb-10 rounded-lg">
             <button onClick={toggleModal} className="float-right">
               <FontAwesomeIcon icon={faTimes} className="text-3xl" />
             </button>
