@@ -58,7 +58,7 @@ const NavBar = () => {
   return (
     <>
       {/*Desktop Navigation*/}
-      <section className="hidden md:flex no-underline text-nav-text-color text-2xl w-max  mt-4 relative">
+      <section className="hidden md:flex no-underline text-nav-text-color text-2xl w-max  mt-4">
         <div className="relative top-4 right-10 space-x-9">
           <Link
             to="/home"
