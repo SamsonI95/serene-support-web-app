@@ -12,10 +12,10 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { auth } from "../../config/firebase";
 import { db } from "../../config/firebase";
 import { collection, addDoc } from "firebase/firestore";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 const SignupPanel = () => {
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -31,6 +31,7 @@ const SignupPanel = () => {
   const send = async () => {
     try {
       await addDoc(dbref, {
+        userName: userName,
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -39,7 +40,7 @@ const SignupPanel = () => {
         state: state,
       });
       alert("Data added successfully");
-      navigate("/signin");
+      navigate("/home");
     } catch (error) {}
   };
 
@@ -56,13 +57,23 @@ const SignupPanel = () => {
 
     try {
       // Create user with email and password
-      await createUserWithEmailAndPassword(auth, email, password);
+      const credentials = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      // After successfully creating the user, set the displayName
+      await updateProfile(credentials.user, {
+        displayName: userName, // Set the displayName to the entered username
+      });
 
       // Handle successful registration
       console.log("User added successfully!");
       alert("User added successfully!");
     } catch (error) {
       // Handle errors
+      alert("Error adding user!");
       console.error("Error adding user:", error.message);
     }
 
@@ -71,7 +82,6 @@ const SignupPanel = () => {
       partnershipFormRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
 
   return (
     <>
@@ -95,14 +105,14 @@ const SignupPanel = () => {
                   <div>
                     <label
                       className="block text-gray-700 text-lg font-bold mb-2 translate-x-1"
-                      htmlFor="email"
+                      htmlFor="username"
                     >
-                      Email
+                      Username
                     </label>
                     <input
-                      type="email"
+                      type="text"
                       className="w-[330px] h-[40px] border-[#464646] border rounded-xl mb-5 indent-4 "
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => setUserName(e.target.value)}
                     />
                   </div>
                   <div>
@@ -151,11 +161,7 @@ const SignupPanel = () => {
                     Create Account
                   </Button>
                   <p className="my-8">OR</p>
-                   <Button
-                    type="button"
-                    variant="white"
-                    size="signin"
-                  >
+                  <Button type="button" variant="white" size="signin">
                     <img
                       src="Assets\icons8-google-48 1.svg"
                       alt="google"
@@ -224,13 +230,6 @@ const SignupPanel = () => {
                     className="w-[400px] h-[50px] rounded-xl mb-8 indent-4 bg-gray-100 border border-gray-300"
                   />
                   <input
-                    type="email"
-                    placeholder="Email Address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-[400px] h-[50px] rounded-xl mb-8 indent-4 bg-gray-100 border border-gray-300"
-                  />
-                  <input
                     type="text"
                     placeholder="City"
                     value={city}
@@ -290,6 +289,19 @@ const SignupPanel = () => {
                 </p>
               </div>
               <div className="">
+                <div>
+                  <label
+                    className="block text-gray-700 text-2xl font-bold mb-2"
+                    htmlFor="username"
+                  >
+                    Username
+                  </label>
+                  <input
+                    type="text"
+                    className="w-[480px] h-[60px] border-[#464646] border rounded-xl mb-5 indent-4 "
+                    onChange={(e) => setUserName(e.target.value)}
+                  />
+                </div>
                 <div>
                   <label
                     className="block text-gray-700 text-2xl font-bold mb-2"
@@ -420,13 +432,6 @@ const SignupPanel = () => {
                 placeholder="Phone Number"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
-                className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
                 className="w-[400px] h-[50px] rounded-xl mb-10 indent-4 bg-gray-100 border border-gray-300"
               />
               <input
