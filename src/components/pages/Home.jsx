@@ -1,5 +1,6 @@
 //App
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 //Component
@@ -17,6 +18,18 @@ import { services } from "../Data types/ServicesData";
 import "../reusables/ListNumber.css";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleRegister = () => {
+    navigate("/signup");
+    console.log("clicked");
+  };
+
+  const handleTherapist = () => {
+    navigate("/therapists");
+    console.log("clicked");
+  };
+
   return (
     <>
       <section>
@@ -40,10 +53,20 @@ const Home = () => {
               you .
             </section>
             <section className="flex justify-center items-center space-x-12 mb-10">
-              <Button type="button" variant="primary" size="small">
+              <Button
+                type="button"
+                variant="primary"
+                size="small"
+                onClick={handleRegister}
+              >
                 Register
               </Button>
-              <Button type="button" variant="hollow" size="medium">
+              <Button
+                type="button"
+                variant="hollow"
+                size="medium"
+                onClick={handleTherapist}
+              >
                 Book A Therapist
               </Button>
             </section>
@@ -251,7 +274,7 @@ const Home = () => {
         </section>
 
         {/* Desktop Home Page */}
-        <section className="hidden max-w-[1440px] mx-auto px-24 md:flex items-center justify-between h-fit">
+        <section className="hidden max-w-[1440px] mx-auto px-[10rem] md:flex items-center justify-between h-fit">
           <div>
             <section className="flex mt-10 space-x-50">
               <div className="mt-24">
@@ -266,10 +289,20 @@ const Home = () => {
                   ready to support you .
                 </div>
                 <div className="space-x-4">
-                  <Button type="button" variant="primary" size="small">
+                  <Button
+                    type="button"
+                    variant="primary"
+                    size="small"
+                    onClick={handleRegister}
+                  >
                     Register
                   </Button>
-                  <Button type="button" variant="hollow" size="medium">
+                  <Button
+                    type="button"
+                    variant="hollow"
+                    size="medium"
+                    onClick={handleTherapist}
+                  >
                     Book A Therapist
                   </Button>
                 </div>
@@ -316,7 +349,7 @@ const Home = () => {
                 </div>
               </div>
             </section>
-            <section className="bg-services-color p-6">
+            <section className="bg-services-color p-6 z-10">
               <h3 className="text-5xl font-semibold text-center my-8">
                 Our comprehensive network of specialized therapist render a wide
                 variety of services
