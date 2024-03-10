@@ -8,7 +8,7 @@ const ServicesList = ({ title, content, click }) => {
           <div>
             <div className="flex items-center">
               {" "}
-              <img src="public/Assets/list-button.png" alt="List Marker" />
+              <img src="Assets/list-button.png" alt="List Marker" />
             </div>
             <div className="relative left-10 -top-6">
               <h4 className="font-bold text-xl md:text-sm mb-4">{title}</h4>
