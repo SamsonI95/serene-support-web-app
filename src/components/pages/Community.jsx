@@ -118,8 +118,8 @@ const Community = () => {
                 ))}
             </section>
             <section className="-translate-x-12">
-              <div className="bg-bcg-color w-140 py-36 px-36">
-                <h3 className=" text-center -translate-x-20 font-semibold text-2xl w-96">
+              <div className="bg-bcg-color w-[445px] py-36 px-36">
+                <h3 className=" text-center -translate-x-15 font-semibold text-2xl w-96 relative -">
                   Get latest News by subscribing to our Newsletter
                 </h3>
                 <div className="flex translate-y-10 justify-center">

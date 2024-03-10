@@ -45,14 +45,14 @@ const Footer = () => {
             </Link>
             <Link
               to="/privacy"
-              className="text-white hover:text-primary-color relative -right-24"
+              className="text-white hover:text-primary-color relative -right-[2.5rem]"
             >
               <Button
                 onClick={handleClick}
                 type="button"
                 variant="primary"
                 size="small2"
-                className="scale-75"
+                className="scale-75 relative -right-[10px]"
               >
                 Explore our privacy
               </Button>
