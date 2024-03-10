@@ -21,14 +21,14 @@ const Therapist = () => {
     <>
       <section>
         <section className="md:hidden px-7">
-          {/* Mobile Home Page */}
+          {/* Mobile Therapist Page */}
           <section className="md:flex md:items-center md:justify-between">
             <section className="  mt-16 max-w-2xl">
               <h3 className="font-bold text-secondary-color text-2xl mx-12">
                 Certified and verified Professionals for your aid
               </h3>
               <img
-                src="public/Assets/Mask group4.png"
+                src="Assets/Mask group4.png"
                 alt="docs"
                 className="mx-auto my-8"
               />
@@ -96,7 +96,7 @@ const Therapist = () => {
           </section>
         </section>
 
-        {/* Desktop Home Page */}
+        {/* Desktop Therapist Page */}
         <section className="hidden max-w-[1440px] mx-auto px-24 md:flex items-center justify-between h-fit">
           <section>
             <section className="flex justify-center items-center mt-16">
@@ -114,7 +114,7 @@ const Therapist = () => {
               </div>
 
               <img
-                src="public/Assets/Mask group4.png"
+                src="Assets/Mask group4.png"
                 alt="docs"
                 className="h-140 mx-auto my-8"
               />

@@ -14,7 +14,7 @@ const Privacy = () => {
           <section className="md:flex md:items-center md:justify-between">
             <section>
               <div className="flex justify-center items-center my-10">
-                <img src="public/Assets/Group 350.svg" alt="pp" />
+                <img src="Assets/Group 350.svg" alt="pp" />
               </div>
 
               <div className="text-center">
@@ -135,7 +135,7 @@ const Privacy = () => {
           <section>
             <section className="flex my-5">
               <div className="flex">
-                <img src="public/Assets/g10.svg" alt="health" />
+                <img src="Assets/g10.svg" alt="health" />
               </div>
               <div className="border w-186 h-180 p-20 bg-[#F6FAFF] shadow-xl">
                 <h3 className="font-bold text-6xl text-secondary-color">
