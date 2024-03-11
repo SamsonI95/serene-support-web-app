@@ -117,8 +117,8 @@ const Community = () => {
                   <NewsCard key={newsItem.title} {...newsItem} />
                 ))}
             </section>
-            <section className="-translate-x-12">
-              <div className="bg-bcg-color w-[450px] py-36 px-36">
+            <section className="-translate-x-[2rem]">
+              <div className="bg-bcg-color w-[480px] py-36">
                 <h3 className="-translate-x-[6rem] font-semibold text-2xl w-96 relative -">
                   Get latest News by subscribing to our Newsletter
                 </h3>

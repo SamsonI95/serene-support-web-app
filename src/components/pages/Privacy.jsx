@@ -110,8 +110,8 @@ const Privacy = () => {
                 className="scale-90"
               />
             </div>
-            <section className="-translate-x-12">
-              <div className="bg-bcg-color w-[450px] py-36 px-36">
+            <section className="-translate-x-[2rem]">
+              <div className="bg-bcg-color w-[480px]py-36">
                 <h3 className=" text-center -translate-x-[6rem] font-semibold text-2xl w-96">
                   Get latest News by subscribing to our Newsletter
                 </h3>
