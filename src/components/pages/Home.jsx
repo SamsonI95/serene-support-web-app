@@ -254,8 +254,8 @@ const Home = () => {
               </div>
             </section>
           </section>
-          <section className="mt-20 -translate-x-[1.7rem]">
-              <div className=" bg-bcg-color w-[449px] py-36">
+          <section className="mt-20 -translate-x-[2rem]">
+              <div className=" bg-bcg-color w-[430px] py-36">
                 <h3 className="text-center translate-x-5 font-semibold text-2xl w-96">
                   Get latest News by subscribing to our Newsletter
                 </h3>
