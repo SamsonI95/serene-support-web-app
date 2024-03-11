@@ -96,7 +96,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="-mr-12">
+            <div className="-translate-x-6">
               <h3 className="text-white text-xl mb-5">Get our App</h3>
               <ul className="text-white">
                 <li className="mb-5">
@@ -134,7 +134,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="-mr-24">
+            <div className="translate-x-7">
               <h3 className="text-white text-xl mb-5">Transparency</h3>
               <ul className="text-white">
                 <li className="mb-5">
@@ -160,7 +160,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
               <FontAwesomeIcon icon={faSquareXTwitter} className="mr-2" />
             </div>
-            <div className="translate-x-36">
+            <div className="translate-x-[7rem]">
               <label htmlFor="languageSelector" className="sr-only">
                 {t("Select Language")}
               </label>
@@ -188,7 +188,7 @@ const Footer = () => {
               <h3>2023</h3>
               <h4 className="font-light translate-x-1">SerenSupport</h4>
             </div>
-            <div className="text-white translate-x-7">
+            <div className="text-white translate-x-4">
               <h3>Terms of Service</h3>
             </div>
           </section>

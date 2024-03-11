@@ -10,9 +10,9 @@ const ServicesList = ({ title, content, click }) => {
               {" "}
               <img src="Assets/list-button.png" alt="List Marker" />
             </div>
-            <div className="relative left-10 -top-6">
+            <div className="relative left-10 -top-6 w-fit">
               <h4 className="font-bold text-xl md:text-sm mb-4">{title}</h4>
-              <p className="mb-4 w-80">{content}</p>
+              <p className="mb-4 w-[18rem]">{content}</p>
               <h5 className="text-sm md:text-xs mb-4 hover:text-primary-color cursor-pointer">
                 {click}
               </h5>

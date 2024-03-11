@@ -118,7 +118,7 @@ const Home = () => {
                   View all Services
                 </Button>
               </div>
-              <div className="w-97 h-0.25 -translate-x-6 bg-border-line-color"></div>
+              <div className="w-[23rem] h-0.25 -translate-x-6 bg-border-line-color"></div>
               <div>
                 <div>
                   <img
@@ -134,7 +134,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className=" translate-x-5 mb-4">
+                <div className=" translate-x-5 mb-4 w-[13rem]">
                   <h3 className="text-primary-color">
                     “Early Detection can limit the impact of mental health on
                     our overall well being”
@@ -162,7 +162,7 @@ const Home = () => {
               <div>
                 <ul className="custom-list">
                   <li className="relative border-b border-border-line-color pb-2 mb-10">
-                    <div className="translate-x-20 -translate-y-7 w-80">
+                    <div className="translate-x-20 -translate-y-7 w-fit">
                       <h3 className="text-bold text-primary-color mb-3">
                         How can we help you today?
                       </h3>
@@ -172,7 +172,7 @@ const Home = () => {
                     </div>
                   </li>
                   <li className="relative border-b border-border-line-color pb-2 mb-10">
-                    <div className="translate-x-20 -translate-y-7 w-80">
+                    <div className="translate-x-20 -translate-y-7 w-[16rem]">
                       <h3 className="text-bold text-primary-color mb-3">
                         Say Hi to like minds.
                       </h3>
@@ -184,7 +184,7 @@ const Home = () => {
                     </div>
                   </li>
                   <li className="relative border-b border-border-line-color pb-2 mb-10">
-                    <div className="translate-x-20 -translate-y-7 w-80">
+                    <div className="translate-x-20 -translate-y-7 w-[16rem]">
                       <h3 className="text-bold text-primary-color mb-3">
                         Want to talk to a therapist? Schedule a call.
                       </h3>
@@ -195,7 +195,7 @@ const Home = () => {
                     </div>
                   </li>
                   <li>
-                    <div className="translate-x-20 -translate-y-7 w-80">
+                    <div className="translate-x-20 -translate-y-7 w-[16rem]">
                       <h3 className="text-bold text-primary-color mb-3">
                         Take the right next steps.
                       </h3>
