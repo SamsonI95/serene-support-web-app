@@ -253,9 +253,10 @@ const Home = () => {
                 </div>
               </div>
             </section>
-            <section className="mt-20 ">
-              <div className="bg-bcg-color  py-36 px-36">
-                <h3 className=" text-center -translate-x-20 font-semibold text-2xl w-96">
+          </section>
+          <section className="mt-20 -translate-x-[2rem]">
+              <div className=" bg-bcg-color w-[430px] py-36">
+                <h3 className="text-center translate-x-5 font-semibold text-2xl w-96">
                   Get latest News by subscribing to our Newsletter
                 </h3>
                 <div className="flex translate-y-10 justify-center">
@@ -270,7 +271,6 @@ const Home = () => {
                 </div>
               </div>
             </section>
-          </section>
         </section>
 
         {/* Desktop Home Page */}
