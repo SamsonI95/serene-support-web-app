@@ -71,6 +71,7 @@ const SignupPanel = () => {
       // Handle successful registration
       console.log("User added successfully!");
       alert("User added successfully!");
+      navigate("/home");
     } catch (error) {
       // Handle errors
       alert("Error adding user!");
