@@ -119,6 +119,19 @@ const SignupPanel = () => {
                   <div>
                     <label
                       className="block text-gray-700 text-lg font-bold mb-2 translate-x-1"
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="w-[330px] h-[40px] border-[#464646] border rounded-xl mb-5 indent-4"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label
+                      className="block text-gray-700 text-lg font-bold mb-2 translate-x-1"
                       htmlFor="password"
                     >
                       Password
