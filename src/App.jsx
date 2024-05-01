@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css"
+import "./App.css";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -16,16 +16,17 @@ import SignupPanel from "./components/pages/SignupPanel";
 
 import Header from "./components/reusables/Header";
 import Footer from "./components/reusables/Footer";
+import ScrollToTop from "./components/Page Component/ScrollToTop";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Root/>}>
+      <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/therapists" element={<Therapist/>} />
+        <Route path="/therapists" element={<Therapist />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="/community" element={<Community/>} />
+        <Route path="/community" element={<Community />} />
         <Route path="/signin" element={<SignInPanel />} />
         <Route path="/signup" element={<SignupPanel />} />
       </Route>
@@ -34,7 +35,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}>
+        <ScrollToTop />
+      </RouterProvider>
     </>
   );
 }
@@ -46,7 +49,7 @@ const Root = () => {
         <Header />
       </div>
 
-      <div >
+      <div>
         <Outlet />
       </div>
 
