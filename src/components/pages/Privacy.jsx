@@ -1,11 +1,16 @@
 //App
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //Component
 import Button from "../reusables/button";
+import { scrollToTop } from "../Page Component/ScrollToTop";
 
 const Privacy = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <>
       <section>

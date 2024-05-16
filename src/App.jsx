@@ -16,7 +16,6 @@ import SignupPanel from "./components/pages/SignupPanel";
 
 import Header from "./components/reusables/Header";
 import Footer from "./components/reusables/Footer";
-import ScrollToTop from "./components/Page Component/ScrollToTop";
 
 function App() {
   const router = createBrowserRouter(
@@ -35,9 +34,7 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router}>
-        <ScrollToTop />
-      </RouterProvider>
+      <RouterProvider router={router} />
     </>
   );
 }

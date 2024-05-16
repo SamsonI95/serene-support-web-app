@@ -235,10 +235,10 @@ const Footer = () => {
                 </li>
                 <li className="mb-8">
                   <Link
-                    to="/services"
+                    to="/therapists"
                     className="text-white hover:text-primary-color"
                   >
-                    Services
+                    Therapists
                   </Link>
                 </li>
                 <li className="mb-8">

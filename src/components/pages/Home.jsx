@@ -1,5 +1,5 @@
 //App
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,8 @@ import Button from "../reusables/button";
 import CardStyyle1 from "../reusables/CardStyyle1";
 import CardStyyle2 from "../reusables/CardStyyle2";
 import ServicesList from "../Page Component/ServicesList";
+import { scrollToTop } from "../Page Component/ScrollToTop";
+import ArrowToTop from "../Page Component/ArrowToTop";
 
 //Data types
 import { HelpData } from "../Data types/CardStyyle1Data";
@@ -29,6 +31,11 @@ const Home = () => {
     navigate("/therapists");
     console.log("clicked");
   };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
 
   return (
     <>
@@ -536,6 +543,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <ArrowToTop/>
       </section>
     </>
   );

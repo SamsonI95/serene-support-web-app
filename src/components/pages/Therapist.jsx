@@ -1,5 +1,5 @@
 //App
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
@@ -7,6 +7,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import PriceCard from "../reusables/PriceCard";
 import TherapistCard1 from "../reusables/TherapistCard1";
 import TherapistCard2 from "../reusables/TherapistCard2";
+import { scrollToTop } from "../Page Component/ScrollToTop";
 
 //Data type
 import { priceCard } from "../Data types/PriceData";
@@ -16,6 +17,9 @@ import { data2 } from "../Data types/TherapistCardData2";
 import Button from "../reusables/button";
 
 const Therapist = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <>

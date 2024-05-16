@@ -1,16 +1,21 @@
 //App
-import React from "react";
+import React, { useEffect } from "react";
 
 //Component
 import Button from "../reusables/button";
 import NewsCard from "../reusables/NewsCard";
 import NewsCardL from "../reusables/NewsCardL";
+import { scrollToTop } from "../Page Component/ScrollToTop";
 
 //Data types
 import { newsData } from "../Data types/NewsCardData";
 import { newsDataL } from "../Data types/NewsCardDataL";
 
 const Community = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <>
       <section>
