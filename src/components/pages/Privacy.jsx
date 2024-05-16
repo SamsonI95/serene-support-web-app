@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //Component
 import Button from "../reusables/button";
 import { scrollToTop } from "../Page Component/ScrollToTop";
+import ArrowToTop from "../Page Component/ArrowToTop";
 
 const Privacy = () => {
   useEffect(() => {
@@ -265,6 +266,7 @@ const Privacy = () => {
             </div>
           </div>
         </section>
+        <ArrowToTop />
       </section>
     </>
   );

@@ -6,6 +6,7 @@ import Button from "../reusables/button";
 import NewsCard from "../reusables/NewsCard";
 import NewsCardL from "../reusables/NewsCardL";
 import { scrollToTop } from "../Page Component/ScrollToTop";
+import ArrowToTop from "../Page Component/ArrowToTop";
 
 //Data types
 import { newsData } from "../Data types/NewsCardData";
@@ -271,6 +272,7 @@ const Community = () => {
             </div>
           </div>
         </section>
+        <ArrowToTop />
       </section>
     </>
   );

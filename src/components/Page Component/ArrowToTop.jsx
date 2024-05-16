@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+//Component
+import { IoIosArrowDropupCircle } from "react-icons/io";
+
 const ArrowToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -9,7 +12,7 @@ const ArrowToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 100) {
+      if (window.scrollY > 100) {
         // Adjust threshold as needed
         setIsVisible(true);
       } else {
@@ -17,21 +20,21 @@ const ArrowToTop = () => {
       }
     };
 
-    window.addEventListener("arrow", toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
 
     return () => {
-      window.removeEventListener("arrow", toggleVisibility);
+      window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
 
   return (
     <button
       onClick={arrowToTop}
-      className={`fixed bottom-10 right-10 z-10 rounded-full bg-blue-500 text-white px-4 py-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+      className={`fixed text-2xl bottom-10 right-10 z-10 rounded-full bg-blue-500 text-white px-4 py-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      Up
+      <IoIosArrowDropupCircle />
     </button>
   );
 };

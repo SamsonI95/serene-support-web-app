@@ -8,6 +8,7 @@ import PriceCard from "../reusables/PriceCard";
 import TherapistCard1 from "../reusables/TherapistCard1";
 import TherapistCard2 from "../reusables/TherapistCard2";
 import { scrollToTop } from "../Page Component/ScrollToTop";
+import ArrowToTop from "../Page Component/ArrowToTop";
 
 //Data type
 import { priceCard } from "../Data types/PriceData";
@@ -177,6 +178,7 @@ const Therapist = () => {
             </section>
           </section>
         </section>
+        <ArrowToTop />
       </section>
     </>
   );
