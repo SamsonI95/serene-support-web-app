@@ -53,7 +53,7 @@ const SignupPanel = () => {
   const partnershipFormRef = useRef(null);
 
   // Google Sign-In function
-  const googleclick = async () => {
+  const googleClick = async () => {
     await signInWithPopup(auth, provider);
     console.log("Google Sign");
     navigate("/home");
@@ -422,7 +422,7 @@ const SignupPanel = () => {
                   type="button"
                   variant="white"
                   size="signinL"
-                  onClick={googlerClick}
+                  onClick={googleClick}
                 >
                   <img
                     src="Assets\icons8-google-48 1.svg"
